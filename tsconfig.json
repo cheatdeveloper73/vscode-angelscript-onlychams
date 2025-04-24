@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "module": "commonjs", // Target module system for VS Code extensions
+      "target": "es2020",      // Target ECMAScript version (adjust if needed)
+      "lib": ["es2020"],      // Standard libraries to include
+      "outDir": "out",       // Output directory for compiled JavaScript (matches 'main' in package.json)
+      "rootDir": "src",      // Root directory of your TypeScript source files
+      "sourceMap": true,     // Generate source maps for debugging
+      "strict": true,        // Enable strict type checking (recommended)
+      "moduleResolution": "node", // How modules are resolved
+      "esModuleInterop": true,    // Allows default imports from commonjs modules
+      "skipLibCheck": true,       // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true // Ensure consistent file casing
+    },
+    "include": [
+      "src/**/*" // Compile all .ts files within the src directory
+    ],
+    "exclude": [
+      "node_modules", // Don't compile dependencies
+      ".vscode-test"  // Don't compile test runner files
+    ]
+  }

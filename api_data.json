@@ -1,0 +1,2488 @@
+{
+  "generatedTimestamp": "2025-04-24 20:22:48 UTC",
+  "objectTypes": [
+    {
+      "namespace": "",
+      "name": "ammo_template_t",
+      "anchor": "type_global_ammo_template_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "managed_string_t@ get_caliber()" },
+        { "declaration": "float get_initial_speed()" },
+        { "declaration": "void set_initial_speed(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "any",
+      "anchor": "type_global_any",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "any& opAssign(any&in)" },
+        { "declaration": "void store(?&in)" },
+        { "declaration": "void store(const int64&in)" },
+        { "declaration": "void store(const double&in)" },
+        { "declaration": "bool retrieve(?&out) const" },
+        { "declaration": "bool retrieve(int64&out) const" },
+        { "declaration": "bool retrieve(double&out) const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" },
+        { "type": "internal", "name": "$beh9", "declaration": "int $beh9()" },
+        { "type": "internal", "name": "$beh10", "declaration": "void $beh10()" },
+        { "type": "internal", "name": "$beh11", "declaration": "bool $beh11()" },
+        { "type": "internal", "name": "$beh12", "declaration": "void $beh12(int&in)" },
+        { "type": "internal", "name": "$beh13", "declaration": "void $beh13(int&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "array",
+      "anchor": "type_global_array",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "T& opIndex(uint index)" },
+        { "declaration": "const T& opIndex(uint index) const" },
+        { "declaration": "uint opForBegin() const" },
+        { "declaration": "bool opForEnd(uint) const" },
+        { "declaration": "uint opForNext(uint) const" },
+        { "declaration": "const T& opForValue0(uint index) const" },
+        { "declaration": "uint opForValue1(uint index) const" },
+        { "declaration": "array<T>& opAssign(const array<T>&in)" },
+        { "declaration": "void insertAt(uint index, const T&in value)" },
+        { "declaration": "void insertAt(uint index, const array<T>&inout arr)" },
+        { "declaration": "void insertLast(const T&in value)" },
+        { "declaration": "void removeAt(uint index)" },
+        { "declaration": "void removeLast()" },
+        { "declaration": "void removeRange(uint start, uint count)" },
+        { "declaration": "uint length() const" },
+        { "declaration": "void reserve(uint length)" },
+        { "declaration": "void resize(uint length)" },
+        { "declaration": "void sortAsc()" },
+        { "declaration": "void sortAsc(uint startAt, uint count)" },
+        { "declaration": "void sortDesc()" },
+        { "declaration": "void sortDesc(uint startAt, uint count)" },
+        { "declaration": "void reverse()" },
+        { "declaration": "int find(const T&in value) const" },
+        { "declaration": "int find(uint startAt, const T&in value) const" },
+        { "declaration": "int findByRef(const T&in value) const" },
+        { "declaration": "int findByRef(uint startAt, const T&in value) const" },
+        { "declaration": "bool opEquals(const array<T>&in) const" },
+        { "declaration": "bool isEmpty() const" },
+        { "declaration": "void sort(array<T>::less&in, uint startAt = 0, uint count = uint(-1))" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" },
+        { "type": "internal", "name": "$beh9", "declaration": "int $beh9()" },
+        { "type": "internal", "name": "$beh10", "declaration": "void $beh10()" },
+        { "type": "internal", "name": "$beh11", "declaration": "bool $beh11()" },
+        { "type": "internal", "name": "$beh12", "declaration": "void $beh12(int&in)" },
+        { "type": "internal", "name": "$beh13", "declaration": "void $beh13(int&in)" },
+        { "type": "template_callback", "name": "$beh8", "declaration": "bool $beh8(int&in, bool&out)" },
+        { "type": "operator_or_cast", "name": "$list", "declaration": "array<T>@ $list(int&in, int&in) { repeat T }" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ballistic_collider_t",
+      "anchor": "type_global_ballistic_collider_t",
+      "properties": [
+        { "declaration": "MaterialType material_type" },
+        { "declaration": "float penetration_level" },
+        { "declaration": "float penetration_chance" },
+        { "declaration": "float ricochet_chance" }
+      ],
+      "methods": [
+        { "declaration": "mono_behaviour_t@ opCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ballistics_collider_t",
+      "anchor": "type_global_ballistics_collider_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "ballistic_collider_t@ opCast()" },
+        { "declaration": "MaterialType get_material_type()" },
+        { "declaration": "float get_trajectory_deviation()" },
+        { "declaration": "void set_trajectory_deviation(float)" },
+        { "declaration": "float get_ricochet_chance()" },
+        { "declaration": "void set_ricochet_chance(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "bind_t",
+      "anchor": "type_global_bind_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool get_enabled()" }
+      ],
+      "behaviours": [
+        { "type": "constructor", "name": "$beh0", "declaration": "bind_t(string, int = 1, INTERACTION_TYPE = INTERACTION_TYPE::HELD)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "body_controller_t",
+      "anchor": "type_global_body_controller_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "body_health_t",
+      "anchor": "type_global_body_health_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "body_controller_t@ get_body_controller()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "body_part_collider_t",
+      "anchor": "type_global_body_part_collider_t",
+      "properties": [
+        { "declaration": "collider_t@ collider" },
+        { "declaration": "managed_string_t@ profile_id" },
+        { "declaration": "float penetration_damage_mod" },
+        { "declaration": "float barb_timer" },
+        { "declaration": "float flame_timer" },
+        { "declaration": "float platform_impact_timer" },
+        { "declaration": "vec3_t last_barb_cut_position" },
+        { "declaration": "EBodyPart body_part_type" },
+        { "declaration": "EBodyPartColliderType body_part_collider_type" }
+      ],
+      "methods": [
+        { "declaration": "ballistics_collider_t@ opCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "body_stamina_t",
+      "anchor": "type_global_body_stamina_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_current_stamina()" },
+        { "declaration": "void set_current_stamina(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "bool_skill_t",
+      "anchor": "type_global_bool_skill_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool get_value()" },
+        { "declaration": "void set_value(bool)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "bounding_box_t",
+      "anchor": "type_global_bounding_box_t",
+      "properties": [
+        { "declaration": "float x" },
+        { "declaration": "float y" },
+        { "declaration": "float w" },
+        { "declaration": "float h" },
+        { "declaration": "bool on_screen" }
+      ],
+      "methods": [
+        { "declaration": "void calculate(const vec2_t&in base_screen, const vec2_t&in head_screen)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "breath_affector_t",
+      "anchor": "type_global_breath_affector_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool get_aiming()" },
+        { "declaration": "float get_intensity()" },
+        { "declaration": "void set_intensity(float)" },
+        { "declaration": "float get_shake_intensity()" },
+        { "declaration": "void set_shake_intensity(float)" },
+        { "declaration": "float get_breath_intensity()" },
+        { "declaration": "void set_breath_intensity(float)" },
+        { "declaration": "float get_breath_frequency()" },
+        { "declaration": "void set_breath_frequency(float)" },
+        { "declaration": "float get_hip_penalty()" },
+        { "declaration": "void set_hip_penalty(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "button_t",
+      "anchor": "type_global_button_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_claymore_t",
+      "anchor": "type_global_cached_claymore_t",
+      "properties": [
+        { "declaration": "vec3_t pos" },
+        { "declaration": "vec3_t rotation" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_container_t",
+      "anchor": "type_global_cached_container_t",
+      "properties": [
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "string id" },
+        { "declaration": "string name" },
+        { "declaration": "vec3_t position" },
+        { "declaration": "vec3_t collider_size" },
+        { "declaration": "vec3_t collider_center" },
+        { "declaration": "quaternion_t rotation" },
+        { "declaration": "uint64 address" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_corpse_t",
+      "anchor": "type_global_cached_corpse_t",
+      "properties": [
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "vec3_t position" },
+        { "declaration": "vec3_t collider_size" },
+        { "declaration": "vec3_t collider_center" },
+        { "declaration": "quaternion_t rotation" },
+        { "declaration": "uint64 address" },
+        { "declaration": "int total_price" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_exit_t",
+      "anchor": "type_global_cached_exit_t",
+      "properties": [
+        { "declaration": "string name" },
+        { "declaration": "string status" },
+        { "declaration": "vec3_t position" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_game_object_t",
+      "anchor": "type_global_cached_game_object_t",
+      "properties": [
+        { "declaration": "string name" },
+        { "declaration": "game_object_t@ game_object" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~cached_game_object_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "cached_game_object_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "cached_game_object_t(const cached_game_object_t&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_item_t",
+      "anchor": "type_global_cached_item_t",
+      "properties": [
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "string id" },
+        { "declaration": "string name" },
+        { "declaration": "vec3_t position" },
+        { "declaration": "vec3_t collider_size" },
+        { "declaration": "vec3_t collider_center" },
+        { "declaration": "quaternion_t rotation" },
+        { "declaration": "uint64 address" },
+        { "declaration": "int price" },
+        { "declaration": "int count" },
+        { "declaration": "bool for_quest" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_mine_t",
+      "anchor": "type_global_cached_mine_t",
+      "properties": [
+        { "declaration": "vec3_t pos" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_part_collider_t",
+      "anchor": "type_global_cached_part_collider_t",
+      "properties": [
+        { "declaration": "collider_bounds_t bounds" }
+      ],
+      "methods": [
+        { "declaration": "cached_part_collider_t& opAssign(const cached_part_collider_t&in)" },
+        { "declaration": "body_part_collider_t@ get_collider_ptr() const" },
+        { "declaration": "unity_transform_t@ get_transform() const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~cached_part_collider_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "cached_part_collider_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "cached_part_collider_t(const cached_part_collider_t&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cached_tripwire_t",
+      "anchor": "type_global_cached_tripwire_t",
+      "properties": [
+        { "declaration": "vec3_t from_pos" },
+        { "declaration": "vec3_t to_pos" },
+        { "declaration": "ETripwireState state" },
+        { "declaration": "bool grenade_active" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "carried_data_t",
+      "anchor": "type_global_carried_data_t",
+      "properties": [
+        { "declaration": "int animated_ammo_min" },
+        { "declaration": "int animated_ammo_max" },
+        { "declaration": "float animated_rotation" },
+        { "declaration": "float vis_alpha" },
+        { "declaration": "bool was_hovered" },
+        { "declaration": "bool applied_chams" },
+        { "declaration": "bool already_looped" }
+      ],
+      "methods": [
+        { "declaration": "carried_data_t& opAssign(const carried_data_t&in)" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~carried_data_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "carried_data_t(const carried_data_t&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "cartridge_t",
+      "anchor": "type_global_cartridge_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "checkbox_t",
+      "anchor": "type_global_checkbox_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool get_value()" },
+        { "declaration": "void set_value(bool value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "child_t",
+      "anchor": "type_global_child_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string get_name() const" },
+        { "declaration": "void set_next_column(bool)" },
+        { "declaration": "void set_flags(int)" },
+        { "declaration": "void set_pos(const vec2_t&in)" },
+        { "declaration": "vec2_t get_pos() const" },
+        { "declaration": "void clear_elements()" },
+        { "declaration": "bool pop_element(const string&in)" },
+        { "declaration": "array<element_t@>@ get_elements()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "collider_bounds_t",
+      "anchor": "type_global_collider_bounds_t",
+      "properties": [
+        { "declaration": "vec3_t center" },
+        { "declaration": "vec3_t extents" },
+        { "declaration": "float height" },
+        { "declaration": "float radius" },
+        { "declaration": "int direction" },
+        { "declaration": "UNITY_COLLIDER_TYPE collider_type" },
+        { "declaration": "bool valid" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "collider_t",
+      "anchor": "type_global_collider_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "mono_behaviour_t@ opCast()" },
+        { "declaration": "collider_bounds_t get_bounds(const string&in class_name) const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "color_t",
+      "anchor": "type_global_color_t",
+      "properties": [
+        { "declaration": "float r" },
+        { "declaration": "float g" },
+        { "declaration": "float b" },
+        { "declaration": "float a" }
+      ],
+      "methods": [
+        { "declaration": "color_t lerp(const color_t&in other, float t) const" }
+      ],
+      "behaviours": [
+        { "type": "list_constructor", "name": "$list", "declaration": "void $list(int&in) { int, int, int, int }" },
+        { "type": "constructor", "name": "$beh0", "declaration": "color_t(int, int, int, int)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "colorpicker_t",
+      "anchor": "type_global_colorpicker_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "color_t get_value()" },
+        { "declaration": "void set_value(color_t value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "combo_t",
+      "anchor": "type_global_combo_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int get_value()" },
+        { "declaration": "void set_value(int value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "const_weakref",
+      "anchor": "type_global_const_weakref",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "const T@ opImplCast() const" },
+        { "declaration": "const T@ get() const" },
+        { "declaration": "const_weakref<T>& opHndlAssign(const const_weakref<T>&in)" },
+        { "declaration": "const_weakref<T>& opAssign(const const_weakref<T>&in)" },
+        { "declaration": "bool opEquals(const const_weakref<T>&in) const" },
+        { "declaration": "const_weakref<T>& opHndlAssign(const T@)" },
+        { "declaration": "bool opEquals(const T@) const" },
+        { "declaration": "const_weakref<T>& opHndlAssign(const weakref<T>&in)" },
+        { "declaration": "bool opEquals(const weakref<T>&in) const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~const_weakref()" },
+        { "type": "template_callback", "name": "$beh8", "declaration": "bool $beh8(int&in, bool&out)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "const_weakref(int&in)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "const_weakref(int&in, const T@)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "datetime",
+      "anchor": "type_global_datetime",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "datetime& opAssign(const datetime&in)" },
+        { "declaration": "uint get_year() const" },
+        { "declaration": "uint get_month() const" },
+        { "declaration": "uint get_day() const" },
+        { "declaration": "uint get_hour() const" },
+        { "declaration": "uint get_minute() const" },
+        { "declaration": "uint get_second() const" },
+        { "declaration": "uint get_weekDay() const" },
+        { "declaration": "bool setDate(uint year, uint month, uint day)" },
+        { "declaration": "bool setTime(uint hour, uint minute, uint second)" },
+        { "declaration": "int64 opSub(const datetime&in) const" },
+        { "declaration": "datetime opAdd(int64 seconds) const" },
+        { "declaration": "datetime opAdd_r(int64 seconds) const" },
+        { "declaration": "datetime& opAddAssign(int64 seconds)" },
+        { "declaration": "datetime opSub(int64 seconds) const" },
+        { "declaration": "datetime opSub_r(int64 seconds) const" },
+        { "declaration": "datetime& opSubAssign(int64 seconds)" },
+        { "declaration": "bool opEquals(const datetime&in) const" },
+        { "declaration": "int opCmp(const datetime&in) const" }
+      ],
+      "behaviours": [
+        { "type": "constructor", "name": "$beh0", "declaration": "datetime()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "datetime(const datetime&in)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "datetime(uint, uint, uint, uint = 0, uint = 0, uint = 0)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "dictionary",
+      "anchor": "type_global_dictionary",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "dictionary& opAssign(const dictionary&in)" },
+        { "declaration": "void set(const string&in, const ?&in)" },
+        { "declaration": "bool get(const string&in, ?&out) const" },
+        { "declaration": "void set(const string&in, const int64&in)" },
+        { "declaration": "bool get(const string&in, int64&out) const" },
+        { "declaration": "void set(const string&in, const double&in)" },
+        { "declaration": "bool get(const string&in, double&out) const" },
+        { "declaration": "bool exists(const string&in) const" },
+        { "declaration": "bool isEmpty() const" },
+        { "declaration": "uint getSize() const" },
+        { "declaration": "bool delete(const string&in)" },
+        { "declaration": "void deleteAll()" },
+        { "declaration": "array<string>@ getKeys() const" },
+        { "declaration": "dictionaryValue& opIndex(const string&in)" },
+        { "declaration": "const dictionaryValue& opIndex(const string&in) const" },
+        { "declaration": "dictionaryIter@ opForBegin() const" },
+        { "declaration": "bool opForEnd(dictionaryIter@) const" },
+        { "declaration": "dictionaryIter@ opForNext(dictionaryIter@) const" },
+        { "declaration": "const dictionaryValue& opForValue0(dictionaryIter@) const" },
+        { "declaration": "const string& opForValue1(dictionaryIter@) const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" },
+        { "type": "internal", "name": "$beh9", "declaration": "int $beh9()" },
+        { "type": "internal", "name": "$beh10", "declaration": "void $beh10()" },
+        { "type": "internal", "name": "$beh11", "declaration": "bool $beh11()" },
+        { "type": "internal", "name": "$beh12", "declaration": "void $beh12(int&in)" },
+        { "type": "internal", "name": "$beh13", "declaration": "void $beh13(int&in)" },
+        { "type": "operator_or_cast", "name": "$list", "declaration": "dictionary@ $list(int&in) { repeat { string, ? } }" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "dictionaryIter",
+      "anchor": "type_global_dictionaryIter",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "dictionaryValue",
+      "anchor": "type_global_dictionaryValue",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "dictionaryValue& opAssign(const dictionaryValue&in)" },
+        { "declaration": "dictionaryValue& opHndlAssign(const ?&in)" },
+        { "declaration": "dictionaryValue& opHndlAssign(const dictionaryValue&in)" },
+        { "declaration": "dictionaryValue& opAssign(const ?&in)" },
+        { "declaration": "dictionaryValue& opAssign(double)" },
+        { "declaration": "dictionaryValue& opAssign(int64)" },
+        { "declaration": "void opCast(?&out)" },
+        { "declaration": "void opConv(?&out)" },
+        { "declaration": "int64 opConv()" },
+        { "declaration": "double opConv()" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~dictionaryValue()" },
+        { "type": "internal", "name": "$beh12", "declaration": "void $beh12(int&in)" },
+        { "type": "internal", "name": "$beh13", "declaration": "void $beh13(int&in)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "dictionaryValue()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "element_t",
+      "anchor": "type_global_element_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "file",
+      "anchor": "type_global_file",
+      "properties": [
+        { "declaration": "bool mostSignificantByteFirst" }
+      ],
+      "methods": [
+        { "declaration": "int open(const string&in, const string&in)" },
+        { "declaration": "int close()" },
+        { "declaration": "int getSize() const" },
+        { "declaration": "bool isEndOfFile() const" },
+        { "declaration": "string readString(uint)" },
+        { "declaration": "string readLine()" },
+        { "declaration": "int64 readInt(uint)" },
+        { "declaration": "uint64 readUInt(uint)" },
+        { "declaration": "float readFloat()" },
+        { "declaration": "double readDouble()" },
+        { "declaration": "int writeString(const string&in)" },
+        { "declaration": "int writeInt(int64, uint)" },
+        { "declaration": "int writeUInt(uint64, uint)" },
+        { "declaration": "int writeFloat(float)" },
+        { "declaration": "int writeDouble(double)" },
+        { "declaration": "int getPos() const" },
+        { "declaration": "int setPos(int)" },
+        { "declaration": "int movePos(int)" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "filesystem",
+      "anchor": "type_global_filesystem",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool changeCurrentPath(const string&in)" },
+        { "declaration": "string getCurrentPath() const" },
+        { "declaration": "array<string>@ getDirs() const" },
+        { "declaration": "array<string>@ getFiles() const" },
+        { "declaration": "bool isDir(const string&in) const" },
+        { "declaration": "bool isLink(const string&in) const" },
+        { "declaration": "int64 getSize(const string&in) const" },
+        { "declaration": "int makeDir(const string&in)" },
+        { "declaration": "int removeDir(const string&in)" },
+        { "declaration": "int deleteFile(const string&in)" },
+        { "declaration": "int copyFile(const string&in, const string&in)" },
+        { "declaration": "int move(const string&in, const string&in)" },
+        { "declaration": "datetime getCreateDateTime(const string&in) const" },
+        { "declaration": "datetime getModifyDateTime(const string&in) const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "fire_mode_component_t",
+      "anchor": "type_global_fire_mode_component_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "void set_fire_mode(EFireMode)" },
+        { "declaration": "EFireMode get_fire_mode()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "firearm_controller_t",
+      "anchor": "type_global_firearm_controller_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "weapon_t@ get_item()" },
+        { "declaration": "int get_current_chamber_index()" },
+        { "declaration": "float get_short_gun()" },
+        { "declaration": "void set_short_gun(float)" },
+        { "declaration": "float get_weapon_length()" },
+        { "declaration": "void set_weapon_length(float)" },
+        { "declaration": "float get_hip_inaccuracy()" },
+        { "declaration": "void set_hip_inaccuracy(float)" },
+        { "declaration": "bool get_auto_fire_on()" },
+        { "declaration": "void set_auto_fire_on(bool)" },
+        { "declaration": "bool get_aiming_interrupted_by_overlap()" },
+        { "declaration": "void set_aiming_interrupted_by_overlap(bool)" },
+        { "declaration": "bool get_is_aiming()" },
+        { "declaration": "void set_is_aiming(bool)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "font_t",
+      "anchor": "type_global_font_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "game_object_t",
+      "anchor": "type_global_game_object_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string name()" },
+        { "declaration": "vec3_t position()" },
+        { "declaration": "internal_transform_t@ transform()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "game_world_t",
+      "anchor": "type_global_game_world_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "managed_string_t@ get_map_id()" },
+        { "declaration": "bool get_raid_started()" },
+        { "declaration": "uint get_interactive_raycast_mask()" },
+        { "declaration": "void set_interactive_raycast_mask(uint)" },
+        { "declaration": "uint get_linecast_mask()" },
+        { "declaration": "void set_linecast_mask(uint)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "globals_t",
+      "anchor": "type_global_globals_t",
+      "properties": [
+        { "declaration": "int screen_width" },
+        { "declaration": "int screen_height" },
+        { "declaration": "bool menu_open" },
+        { "declaration": "bool playing_arena" },
+        { "declaration": "int player_count" },
+        { "declaration": "int item_count" },
+        { "declaration": "int corpse_count" },
+        { "declaration": "int container_count" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "grid",
+      "anchor": "type_global_grid",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "T& opIndex(uint, uint)" },
+        { "declaration": "const T& opIndex(uint, uint) const" },
+        { "declaration": "void resize(uint width, uint height)" },
+        { "declaration": "uint width() const" },
+        { "declaration": "uint height() const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" },
+        { "type": "internal", "name": "$beh9", "declaration": "int $beh9()" },
+        { "type": "internal", "name": "$beh10", "declaration": "void $beh10()" },
+        { "type": "internal", "name": "$beh11", "declaration": "bool $beh11()" },
+        { "type": "internal", "name": "$beh12", "declaration": "void $beh12(int&in)" },
+        { "type": "internal", "name": "$beh13", "declaration": "void $beh13(int&in)" },
+        { "type": "template_callback", "name": "$beh8", "declaration": "bool $beh8(int&in, bool&out)" },
+        { "type": "operator_or_cast", "name": "$list", "declaration": "grid<T>@ $list(int&in, int&in) { repeat { repeat_same T } }" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "hand_stamina_t",
+      "anchor": "type_global_hand_stamina_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_current_stamina()" },
+        { "declaration": "void set_current_stamina(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "health_controller_t",
+      "anchor": "type_global_health_controller_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "body_health_t@ get_body_health()" },
+        { "declaration": "int get_health_status()" },
+        { "declaration": "bool is_alive()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "i_player_t",
+      "anchor": "type_global_i_player_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "game_object_t@ game_object()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "int_container_t",
+      "anchor": "type_global_int_container_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int get_value()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "internal_transform_t",
+      "anchor": "type_global_internal_transform_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "vec3_t get_position()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "item_t",
+      "anchor": "type_global_item_t",
+      "properties": [
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "string id" },
+        { "declaration": "string name" },
+        { "declaration": "vec3_t position" },
+        { "declaration": "vec3_t collider_size" },
+        { "declaration": "vec3_t collider_center" },
+        { "declaration": "quaternion_t rotation" },
+        { "declaration": "uint64 address" },
+        { "declaration": "int price" },
+        { "declaration": "int count" },
+        { "declaration": "bool for_quest" }
+      ],
+      "methods": [
+        { "declaration": "item_t& opAssign(const item_t&in)" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "item_template_t",
+      "anchor": "type_global_item_template_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "keybind_t",
+      "anchor": "type_global_keybind_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bind_t get_value()" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "magazine_t",
+      "anchor": "type_global_magazine_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "managed_string_t",
+      "anchor": "type_global_managed_string_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string opImplConv() const" },
+        { "declaration": "int get_size()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_behaviour_t",
+      "anchor": "type_global_mono_behaviour_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "game_object_t@ game_object()" },
+        { "declaration": "string class_name()" },
+        { "declaration": "int instance_id()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "movement_state_t",
+      "anchor": "type_global_movement_state_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "vec3_t get_current_down_force()" },
+        { "declaration": "void set_current_down_force(vec3_t)" },
+        { "declaration": "EPlayerState get_name()" },
+        { "declaration": "void set_name(EPlayerState)" },
+        { "declaration": "EStateType get_type()" },
+        { "declaration": "void set_type(EStateType)" },
+        { "declaration": "int get_animator_state_hash()" },
+        { "declaration": "void set_animator_state_hash(int)" },
+        { "declaration": "float get_plant_time()" },
+        { "declaration": "void set_plant_time(float)" },
+        { "declaration": "bool get_can_interact()" },
+        { "declaration": "void set_can_interact(bool)" },
+        { "declaration": "bool get_disable_root_motion()" },
+        { "declaration": "void set_disable_root_motion(bool)" },
+        { "declaration": "bool get_stick_to_ground()" },
+        { "declaration": "void set_stick_to_ground(bool)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "movement_t",
+      "anchor": "type_global_movement_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "movement_state_t@ get_current_state()" },
+        { "declaration": "movement_state_t@ get_previous_state()" },
+        { "declaration": "movement_state_t@ get_override_state()" },
+        { "declaration": "vec2_t get_view_angles()" },
+        { "declaration": "void set_view_angles(vec2_t)" },
+        { "declaration": "bool get_is_bot()" },
+        { "declaration": "void set_is_bot(bool)" },
+        { "declaration": "int get_physical_condition()" },
+        { "declaration": "void set_physical_condition(int)" },
+        { "declaration": "float get_time_since_last_jump()" },
+        { "declaration": "void set_time_since_last_jump(float)" },
+        { "declaration": "float get_hands_to_body_angle()" },
+        { "declaration": "void set_hands_to_body_angle(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "multi_combo_t",
+      "anchor": "type_global_multi_combo_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "uint8 get_value()" },
+        { "declaration": "void set_value(int idx, uint8 value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "observed_player_state_context_t",
+      "anchor": "type_global_observed_player_state_context_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "vec2_t get_rotation()" },
+        { "declaration": "vec3_t get_velocity()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "physical_t",
+      "anchor": "type_global_physical_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "body_stamina_t@ get_body_stamina()" },
+        { "declaration": "void set_body_stamina(body_stamina_t@)" },
+        { "declaration": "hand_stamina_t@ get_hand_stamina()" },
+        { "declaration": "void set_hand_stamina(hand_stamina_t@)" },
+        { "declaration": "float get_fall_damage_multiplier()" },
+        { "declaration": "void set_fall_damage_multiplier(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "player_bones_t",
+      "anchor": "type_global_player_bones_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "player_flag_t",
+      "anchor": "type_global_player_flag_t",
+      "properties": [
+        { "declaration": "string text" },
+        { "declaration": "color_t color" },
+        { "declaration": "flag_type type" }
+      ],
+      "methods": [
+        { "declaration": "player_flag_t& opAssign(const player_flag_t&in)" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~player_flag_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "player_flag_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "player_flag_t(const player_flag_t&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "player_spring_t",
+      "anchor": "type_global_player_spring_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "recoil_spring_t@ get_recoil_spring()" },
+        { "declaration": "recoil_spring_t@ get_hands_position()" },
+        { "declaration": "recoil_spring_t@ get_hands_rotation()" },
+        { "declaration": "recoil_spring_t@ get_camera_position()" },
+        { "declaration": "recoil_spring_t@ get_camera_rotation()" },
+        { "declaration": "vec3_t get_camera_offset()" },
+        { "declaration": "void set_camera_offset(vec3_t)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "player_t",
+      "anchor": "type_global_player_t",
+      "properties": [
+        { "declaration": "bool offline" },
+        { "declaration": "int total_price" },
+        { "declaration": "string weapon_name" },
+        { "declaration": "string account_id" },
+        { "declaration": "string exit_point" },
+        { "declaration": "string profile_id" },
+        { "declaration": "bounding_box_t bounds" },
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "uint64 hashed_name" },
+        { "declaration": "i_player_t@ player" },
+        { "declaration": "weapon_animation_t@ weapon" },
+        { "declaration": "movement_t@ movement" },
+        { "declaration": "profile_t@ profile" },
+        { "declaration": "physical_t@ physical" },
+        { "declaration": "internal_transform_t@ base_transform" },
+        { "declaration": "health_controller_t@ health_controller" },
+        { "declaration": "recoil_spring_t@ recoil_spring" },
+        { "declaration": "firearm_controller_t@ controller" },
+        { "declaration": "player_spring_t@ spring" },
+        { "declaration": "game_object_t@ player_object" },
+        { "declaration": "observed_player_state_context_t@ state_context" },
+        { "declaration": "weapon_t@ weapon_item" },
+        { "declaration": "player_bones_t@ player_bones" }
+      ],
+      "methods": [
+        { "declaration": "player_t& opAssign(const player_t&in)" },
+        { "declaration": "string get_name() const" },
+        { "declaration": "array<unity_transform_t@>@ get_bones() const" },
+        { "declaration": "array<player_flag_t>@ get_flags() const" },
+        { "declaration": "array<cached_part_collider_t>@ get_colliders() const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "profile_info_t",
+      "anchor": "type_global_profile_info_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int get_side()" },
+        { "declaration": "int get_registration_date()" },
+        { "declaration": "int get_experience()" },
+        { "declaration": "managed_string_t@ get_nickname()" },
+        { "declaration": "managed_string_t@ get_entry_point()" },
+        { "declaration": "int get_level()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "profile_skills_t",
+      "anchor": "type_global_profile_skills_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "skill_t@ get_jump()" },
+        { "declaration": "skill_t@ get_examine()" },
+        { "declaration": "skill_t@ get_magazine_load()" },
+        { "declaration": "skill_t@ get_magazine_unload()" },
+        { "declaration": "skill_t@ get_loot_speed()" },
+        { "declaration": "skill_t@ get_magazine_check_speed()" },
+        { "declaration": "skill_t@ get_magazine_check_accuracy()" },
+        { "declaration": "skill_t@ get_lucky_search()" },
+        { "declaration": "skill_t@ get_weight_increase()" },
+        { "declaration": "skill_t@ get_sprint_increase()" },
+        { "declaration": "skill_t@ get_throw_increase()" },
+        { "declaration": "bool_skill_t@ get_throwing_elite_buff()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "profile_t",
+      "anchor": "type_global_profile_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "profile_info_t@ get_info()" },
+        { "declaration": "profile_skills_t@ get_skills()" },
+        { "declaration": "managed_string_t@ get_id()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "quaternion_t",
+      "anchor": "type_global_quaternion_t",
+      "properties": [
+        { "declaration": "float x" },
+        { "declaration": "float y" },
+        { "declaration": "float z" },
+        { "declaration": "float w" }
+      ],
+      "methods": [
+        { "declaration": "quaternion_t& opAssign(const quaternion_t&in)" },
+        { "declaration": "float magnitude() const" },
+        { "declaration": "void normalize()" },
+        { "declaration": "quaternion_t conjugate() const" },
+        { "declaration": "quaternion_t opMul(const quaternion_t&in) const" },
+        { "declaration": "vec3_t opMul(const vec3_t&in) const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~quaternion_t()" },
+        { "type": "list_constructor", "name": "$list", "declaration": "void $list(int&in) { float, float, float, float }" },
+        { "type": "constructor", "name": "$beh0", "declaration": "quaternion_t(float = 0, float = 0, float = 0, float = 1)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "quaternion_t(const quaternion_t&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "recoil_spring_t",
+      "anchor": "type_global_recoil_spring_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_return_speed()" },
+        { "declaration": "void set_return_speed(float)" },
+        { "declaration": "float get_damping()" },
+        { "declaration": "void set_damping(float)" },
+        { "declaration": "vec3_t get_current()" },
+        { "declaration": "void set_current(vec3_t)" },
+        { "declaration": "vec3_t get_velocity()" },
+        { "declaration": "void set_rotation(vec3_t, bool reset = false)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "sdk_data_t",
+      "anchor": "type_global_sdk_data_t",
+      "properties": [
+        { "declaration": "player_t@ local" },
+        { "declaration": "unity_camera_t@ camera" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "skill_t",
+      "anchor": "type_global_skill_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_value()" },
+        { "declaration": "void set_value(float)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "slider_float_t",
+      "anchor": "type_global_slider_float_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_value()" },
+        { "declaration": "void set_value(float value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "slider_int_t",
+      "anchor": "type_global_slider_int_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int get_value()" },
+        { "declaration": "void set_value(int value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "slot_t",
+      "anchor": "type_global_slot_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "item_t@ get_contained_item()" },
+        { "declaration": "magazine_t@ get_contained_magazine()" },
+        { "declaration": "cartridge_t@ get_contained_cartridge()" },
+        { "declaration": "managed_string_t@ get_slot_name()" },
+        { "declaration": "managed_string_t@ get_id()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "socket",
+      "anchor": "type_global_socket",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int listen(uint16 port)" },
+        { "declaration": "int close()" },
+        { "declaration": "socket@ accept(int64 timeout = 0)" },
+        { "declaration": "int connect(uint ipv4address, uint16 port)" },
+        { "declaration": "int send(const string&in data)" },
+        { "declaration": "string receive(int64 timeout = 0)" },
+        { "declaration": "bool isActive() const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "string",
+      "anchor": "type_global_string",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string& opAssign(const string&in)" },
+        { "declaration": "string& opAddAssign(const string&in)" },
+        { "declaration": "bool opEquals(const string&in) const" },
+        { "declaration": "int opCmp(const string&in) const" },
+        { "declaration": "string opAdd(const string&in) const" },
+        { "declaration": "uint length() const" },
+        { "declaration": "void resize(uint)" },
+        { "declaration": "bool isEmpty() const" },
+        { "declaration": "uint8& opIndex(uint)" },
+        { "declaration": "const uint8& opIndex(uint) const" },
+        { "declaration": "string& opAssign(double)" },
+        { "declaration": "string& opAddAssign(double)" },
+        { "declaration": "string opAdd(double) const" },
+        { "declaration": "string opAdd_r(double) const" },
+        { "declaration": "string& opAssign(float)" },
+        { "declaration": "string& opAddAssign(float)" },
+        { "declaration": "string opAdd(float) const" },
+        { "declaration": "string opAdd_r(float) const" },
+        { "declaration": "string& opAssign(int64)" },
+        { "declaration": "string& opAddAssign(int64)" },
+        { "declaration": "string opAdd(int64) const" },
+        { "declaration": "string opAdd_r(int64) const" },
+        { "declaration": "string& opAssign(uint64)" },
+        { "declaration": "string& opAddAssign(uint64)" },
+        { "declaration": "string opAdd(uint64) const" },
+        { "declaration": "string opAdd_r(uint64) const" },
+        { "declaration": "string& opAssign(bool)" },
+        { "declaration": "string& opAddAssign(bool)" },
+        { "declaration": "string opAdd(bool) const" },
+        { "declaration": "string opAdd_r(bool) const" },
+        { "declaration": "string substr(uint start = 0, int count = -1) const" },
+        { "declaration": "int findFirst(const string&in, uint start = 0) const" },
+        { "declaration": "int findFirstOf(const string&in, uint start = 0) const" },
+        { "declaration": "int findFirstNotOf(const string&in, uint start = 0) const" },
+        { "declaration": "int findLast(const string&in, int start = -1) const" },
+        { "declaration": "int findLastOf(const string&in, int start = -1) const" },
+        { "declaration": "int findLastNotOf(const string&in, int start = -1) const" },
+        { "declaration": "void insert(uint pos, const string&in other)" },
+        { "declaration": "void erase(uint pos, int count = -1)" },
+        { "declaration": "int regexFind(const string&in regex, uint start = 0, uint&out lengthOfMatch = void) const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~string()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "string()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "string(const string&in)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "unity_camera_t",
+      "anchor": "type_global_unity_camera_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "mono_behaviour_t@ opCast()" },
+        { "declaration": "float get_fov()" },
+        { "declaration": "void set_fov(float)" },
+        { "declaration": "float get_aspect_ratio()" },
+        { "declaration": "void set_aspect_ratio(float)" },
+        { "declaration": "bool get_occlusion_cull()" },
+        { "declaration": "void set_occlusion_cull(bool)" },
+        { "declaration": "float get_near_clip()" },
+        { "declaration": "void set_near_clip(float)" },
+        { "declaration": "vmatrix_t get_matrix()" },
+        { "declaration": "uint64 get_scene()" },
+        { "declaration": "vec2_t world_to_screen(vec3_t pos)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "unity_transform_t",
+      "anchor": "type_global_unity_transform_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "vec3_t position()" },
+        { "declaration": "void set_pos(const vec3_t&in)" },
+        { "declaration": "void set_position(const vec3_t&in)" },
+        { "declaration": "quaternion_t rotation()" },
+        { "declaration": "vec3_t right()" },
+        { "declaration": "vec3_t up()" },
+        { "declaration": "vec3_t forward()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "vec2_t",
+      "anchor": "type_global_vec2_t",
+      "properties": [
+        { "declaration": "float x" },
+        { "declaration": "float y" }
+      ],
+      "methods": [
+        { "declaration": "float distance(const vec2_t&in to)" },
+        { "declaration": "float length()" },
+        { "declaration": "vec2_t opAdd(const vec2_t&in) const" },
+        { "declaration": "vec2_t opSub(const vec2_t&in) const" },
+        { "declaration": "vec2_t opMul(const vec2_t&in) const" },
+        { "declaration": "vec2_t opDiv(const vec2_t&in) const" },
+        { "declaration": "vec2_t opMul(float) const" },
+        { "declaration": "vec2_t opDiv(float) const" },
+        { "declaration": "bool opEquals(const vec2_t&in) const" },
+        { "declaration": "bool opNotEquals(const vec2_t&in) const" },
+        { "declaration": "int opCmp(const vec2_t&in) const" },
+        { "declaration": "vec2_t& opAddAssign(const vec2_t&in)" },
+        { "declaration": "vec2_t& opSubAssign(const vec2_t&in)" },
+        { "declaration": "vec2_t& opMulAssign(const vec2_t&in)" },
+        { "declaration": "vec2_t& opDivAssign(const vec2_t&in)" },
+        { "declaration": "vec2_t& opMulAssign(float)" },
+        { "declaration": "vec2_t& opDivAssign(float)" }
+      ],
+      "behaviours": [
+        { "type": "list_constructor", "name": "$list", "declaration": "void $list(int&in) { float, float }" },
+        { "type": "constructor", "name": "$beh0", "declaration": "vec2_t(float, float)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "vec3_t",
+      "anchor": "type_global_vec3_t",
+      "properties": [
+        { "declaration": "float x" },
+        { "declaration": "float y" },
+        { "declaration": "float z" }
+      ],
+      "methods": [
+        { "declaration": "float distance(const vec3_t&in to)" },
+        { "declaration": "float dot(const vec3_t&in to)" },
+        { "declaration": "float length()" },
+        { "declaration": "float length_2d()" },
+        { "declaration": "float magnitude()" },
+        { "declaration": "vec3_t cross(const vec3_t&in to)" },
+        { "declaration": "bool opEquals(const vec3_t&in) const" },
+        { "declaration": "bool opNotEquals(const vec3_t&in) const" },
+        { "declaration": "vec3_t opAdd(const vec3_t&in) const" },
+        { "declaration": "vec3_t& opDiv(float)" },
+        { "declaration": "vec3_t& opAddAssign(const vec3_t&in)" },
+        { "declaration": "vec3_t& opSubAssign(const vec3_t&in)" },
+        { "declaration": "vec3_t& opMulAssign(float)" },
+        { "declaration": "vec3_t& opDivAssign(float)" }
+      ],
+      "behaviours": [
+        { "type": "list_constructor", "name": "$list", "declaration": "void $list(int&in) { float, float, float }" },
+        { "type": "constructor", "name": "$beh0", "declaration": "vec3_t(float, float, float)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "vmatrix_t",
+      "anchor": "type_global_vmatrix_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "weakref",
+      "anchor": "type_global_weakref",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "T@ opImplCast()" },
+        { "declaration": "T@ get() const" },
+        { "declaration": "weakref<T>& opHndlAssign(const weakref<T>&in)" },
+        { "declaration": "weakref<T>& opAssign(const weakref<T>&in)" },
+        { "declaration": "bool opEquals(const weakref<T>&in) const" },
+        { "declaration": "weakref<T>& opHndlAssign(T@)" },
+        { "declaration": "bool opEquals(const T@) const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~weakref()" },
+        { "type": "template_callback", "name": "$beh8", "declaration": "bool $beh8(int&in, bool&out)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "weakref(int&in)" },
+        { "type": "constructor", "name": "$beh0", "declaration": "weakref(int&in, T@)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "weapon_animation_t",
+      "anchor": "type_global_weapon_animation_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "player_spring_t@ get_spring()" },
+        { "declaration": "firearm_controller_t@ get_firearm_controller()" },
+        { "declaration": "breath_affector_t@ get_breath_affector()" },
+        { "declaration": "bool get_is_sprinting()" },
+        { "declaration": "bool get_is_aiming()" },
+        { "declaration": "float get_smoothed_tilt()" },
+        { "declaration": "void set_smoothed_tilt(float)" },
+        { "declaration": "float get_possible_tilt()" },
+        { "declaration": "void set_possible_tilt(float)" },
+        { "declaration": "string name()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "weapon_t",
+      "anchor": "type_global_weapon_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "item_t@ opCast()" },
+        { "declaration": "slot_t@ get_mag_slot()" },
+        { "declaration": "array<slot_t@>@ get_chambers()" },
+        { "declaration": "weapon_template_t@ get_weapon_template()" },
+        { "declaration": "fire_mode_component_t@ get_fire_mode()" },
+        { "declaration": "int_container_t@ get_aim_index()" },
+        { "declaration": "array<slot_t@>@ get_slots()" },
+        { "declaration": "EReloadMode get_reload_mode()" },
+        { "declaration": "float get_speed_factor()" },
+        { "declaration": "ammo_template_t@ get_ammo_template()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "weapon_template_t",
+      "anchor": "type_global_weapon_template_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "item_template_t@ opCast()" },
+        { "declaration": "ammo_template_t@ get_ammo_template()" },
+        { "declaration": "int get_shotgun_dispersion()" },
+        { "declaration": "void set_shotgun_dispersion(int)" },
+        { "declaration": "int get_b_firerate()" },
+        { "declaration": "void set_b_firerate(int)" },
+        { "declaration": "int get_single_fire_rate()" },
+        { "declaration": "void set_single_fire_rate(int)" },
+        { "declaration": "EReloadMode get_reload_mode()" },
+        { "declaration": "void set_reload_mode(EReloadMode)" },
+        { "declaration": "float get_velocity()" },
+        { "declaration": "void set_velocity(float)" },
+        { "declaration": "bool get_is_bolt_action()" },
+        { "declaration": "void set_is_bolt_action(bool)" },
+        { "declaration": "float get_ergonomics()" },
+        { "declaration": "void set_ergonomics(float)" },
+        { "declaration": "bool get_is_bolt_catch()" },
+        { "declaration": "void set_is_bolt_catch(bool)" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "window_t",
+      "anchor": "type_global_window_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "float get_dpi_scale() const" },
+        { "declaration": "void set_dpi_scale(float)" },
+        { "declaration": "bool get_visibility() const" },
+        { "declaration": "void set_visibility(bool)" },
+        { "declaration": "vec2_t get_size() const" },
+        { "declaration": "void set_size(const vec2_t&in)" },
+        { "declaration": "vec2_t get_default_size() const" },
+        { "declaration": "vec2_t get_pos() const" },
+        { "declaration": "string get_name() const" },
+        { "declaration": "child_t@ insert_child(const string&in, const vec2_t&in pos = vec2_t(-1,-1), const vec2_t&in size = vec2_t(-1,-1), int flags = 0)" },
+        { "declaration": "child_t@ find_child(const string&in)" },
+        { "declaration": "bool pop_element(const string&in)" },
+        { "declaration": "uint get_element_count() const" },
+        { "declaration": "void set_force_pos(bool, const vec2_t&in)" },
+        { "declaration": "array<element_t@>@ get_elements()" },
+        { "declaration": "array<child_t@>@ get_children()" },
+        { "declaration": "array<keybind_t@>@ get_all_binds() const" },
+        { "declaration": "array<element_t@>@ get_all_cfg_elements()" }
+      ],
+      "behaviours": [
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "namespace": "",
+      "name": "EBodyPart",
+      "anchor": "enum_global_EBodyPart",
+      "values": [
+        { "name": "Head", "value": 0 },
+        { "name": "Chest", "value": 1 },
+        { "name": "Stomach", "value": 2 },
+        { "name": "LeftArm", "value": 3 },
+        { "name": "RightArm", "value": 4 },
+        { "name": "LeftLeg", "value": 5 },
+        { "name": "RightLeg", "value": 6 },
+        { "name": "Common", "value": 7 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "EBodyPartColliderType",
+      "anchor": "enum_global_EBodyPartColliderType",
+      "values": [
+        { "name": "None", "value": -1 },
+        { "name": "HeadCommon", "value": 0 },
+        { "name": "RibcageUp", "value": 1 },
+        { "name": "Pelvis", "value": 3 },
+        { "name": "LeftUpperArm", "value": 4 },
+        { "name": "LeftForearm", "value": 5 },
+        { "name": "RightUpperArm", "value": 6 },
+        { "name": "RightForearm", "value": 7 },
+        { "name": "LeftThigh", "value": 8 },
+        { "name": "LeftCalf", "value": 9 },
+        { "name": "RightThigh", "value": 10 },
+        { "name": "RightCalf", "value": 11 },
+        { "name": "ParietalHead", "value": 12 },
+        { "name": "BackHead", "value": 13 },
+        { "name": "Ears", "value": 14 },
+        { "name": "Eyes", "value": 15 },
+        { "name": "Jaw", "value": 16 },
+        { "name": "NeckFront", "value": 17 },
+        { "name": "NeckBack", "value": 18 },
+        { "name": "RightSideChestUp", "value": 19 },
+        { "name": "LeftSideChestUp", "value": 20 },
+        { "name": "SpineTop", "value": 21 },
+        { "name": "SpineDown", "value": 22 },
+        { "name": "PelvisBack", "value": 23 },
+        { "name": "RightSideChestDown", "value": 24 },
+        { "name": "LeftSideChestDown", "value": 25 },
+        { "name": "RibcageLow", "value": 26 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "EFireMode",
+      "anchor": "enum_global_EFireMode",
+      "values": [
+        { "name": "fullauto", "value": 0 },
+        { "name": "single", "value": 1 },
+        { "name": "doublet", "value": 2 },
+        { "name": "burst", "value": 3 },
+        { "name": "doubleaction", "value": 4 },
+        { "name": "semiauto", "value": 5 },
+        { "name": "grenadeThrowing", "value": 6 },
+        { "name": "greanadePlanting", "value": 7 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ELEMENT_TYPE",
+      "anchor": "enum_global_ELEMENT_TYPE",
+      "values": [
+        { "name": "LABEL", "value": 0 },
+        { "name": "CHECKBOX", "value": 1 },
+        { "name": "SLIDER_INT", "value": 2 },
+        { "name": "SLIDER_FLOAT", "value": 3 },
+        { "name": "SINGLE_COMBO", "value": 4 },
+        { "name": "MULTI_COMBO", "value": 5 },
+        { "name": "BUTTON", "value": 6 },
+        { "name": "DIVIDER", "value": 7 },
+        { "name": "LABEL_DIVIDER", "value": 8 },
+        { "name": "SINGLE_LISTBOX", "value": 9 },
+        { "name": "MULTI_LISTBOX", "value": 10 },
+        { "name": "COLORPICKER", "value": 11 },
+        { "name": "KEYBIND", "value": 12 },
+        { "name": "TAB", "value": 13 },
+        { "name": "SUBTAB", "value": 14 },
+        { "name": "GROUP", "value": 15 },
+        { "name": "SWITCH", "value": 16 },
+        { "name": "INPUT_TEXT", "value": 17 },
+        { "name": "CLICK_LABEL", "value": 18 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "EPlayerState",
+      "anchor": "enum_global_EPlayerState",
+      "values": [
+        { "name": "None", "value": 0 },
+        { "name": "Idle", "value": 1 },
+        { "name": "ProneIdle", "value": 2 },
+        { "name": "ProneMove", "value": 3 },
+        { "name": "Run", "value": 4 },
+        { "name": "Sprint", "value": 5 },
+        { "name": "Jump", "value": 6 },
+        { "name": "FallDown", "value": 7 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "EReloadMode",
+      "anchor": "enum_global_EReloadMode",
+      "values": [
+        { "name": "ExternalMagazine", "value": 0 },
+        { "name": "InternalMagazine", "value": 1 },
+        { "name": "OnlyBarrel", "value": 2 },
+        { "name": "ExternalMagazineWithInternalReloadSupport", "value": 3 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "EStateType",
+      "anchor": "enum_global_EStateType",
+      "values": [
+        { "name": "None", "value": 0 },
+        { "name": "In", "value": 1 },
+        { "name": "Out", "value": 2 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "ETripwireState",
+      "anchor": "enum_global_ETripwireState",
+      "values": [
+        { "name": "None", "value": 0 },
+        { "name": "Wait", "value": 1 },
+        { "name": "Active", "value": 2 },
+        { "name": "Exploding", "value": 3 },
+        { "name": "Exploded", "value": 4 },
+        { "name": "Inert", "value": 5 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "FONTS",
+      "anchor": "enum_global_FONTS",
+      "values": [
+        { "name": "TAHOMA_8", "value": 0 },
+        { "name": "VERDANA_34_BOLD", "value": 1 },
+        { "name": "TAHOMA_7_BOLD", "value": 2 },
+        { "name": "TAHOMA_9_BOLD", "value": 3 },
+        { "name": "TAHOMA_7", "value": 4 },
+        { "name": "TAHOMA_8_BOLD", "value": 6 },
+        { "name": "TAHOMA_6_BOLD", "value": 7 },
+        { "name": "TAHOMA_10_BOLD", "value": 8 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "HumanBones",
+      "anchor": "enum_global_HumanBones",
+      "values": [
+        { "name": "InvalidBone", "value": -1 },
+        { "name": "Head", "value": 78 },
+        { "name": "Neck", "value": 33 },
+        { "name": "UpperChest", "value": 34 },
+        { "name": "MidChest", "value": 15 },
+        { "name": "Stomach", "value": 18 },
+        { "name": "Pelvis", "value": 4 },
+        { "name": "RightThigh", "value": 11 },
+        { "name": "RightKnee", "value": 12 },
+        { "name": "RightFoot", "value": 13 },
+        { "name": "RightToe", "value": 14 },
+        { "name": "LeftThigh", "value": 6 },
+        { "name": "LeftKnee", "value": 7 },
+        { "name": "LeftFoot", "value": 8 },
+        { "name": "LeftToe", "value": 9 },
+        { "name": "RightShoulder", "value": 56 },
+        { "name": "RightElbow", "value": 57 },
+        { "name": "RightWrist", "value": 59 },
+        { "name": "LeftShoulder", "value": 35 },
+        { "name": "LeftElbow", "value": 36 },
+        { "name": "LeftWrist", "value": 38 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "INTERACTION_TYPE",
+      "anchor": "enum_global_INTERACTION_TYPE",
+      "values": [
+        { "name": "TOGGLE", "value": 2 },
+        { "name": "HELD", "value": 1 },
+        { "name": "ALWAYS", "value": 0 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "MaterialType",
+      "anchor": "enum_global_MaterialType",
+      "values": [
+        { "name": "None", "value": 0 },
+        { "name": "Asphalt", "value": 1 },
+        { "name": "Body", "value": 2 },
+        { "name": "Cardboard", "value": 3 },
+        { "name": "Chainfence", "value": 4 },
+        { "name": "Concrete", "value": 5 },
+        { "name": "Fabric", "value": 6 },
+        { "name": "GarbageMetal", "value": 7 },
+        { "name": "GarbagePaper", "value": 8 },
+        { "name": "GenericSoft", "value": 9 },
+        { "name": "Glass", "value": 10 },
+        { "name": "GlassShattered", "value": 11 },
+        { "name": "Grate", "value": 12 },
+        { "name": "GrassHigh", "value": 13 },
+        { "name": "GrassLow", "value": 14 },
+        { "name": "Gravel", "value": 15 },
+        { "name": "MetalThin", "value": 16 },
+        { "name": "MetalThick", "value": 17 },
+        { "name": "Mud", "value": 18 },
+        { "name": "Pebbles", "value": 19 },
+        { "name": "Plastic", "value": 20 },
+        { "name": "Stone", "value": 21 },
+        { "name": "Soil", "value": 22 },
+        { "name": "SoilForest", "value": 23 },
+        { "name": "Tile", "value": 24 },
+        { "name": "Water", "value": 25 },
+        { "name": "WaterPuddle", "value": 26 },
+        { "name": "WoodThin", "value": 27 },
+        { "name": "WoodThick", "value": 28 },
+        { "name": "Tyre", "value": 29 },
+        { "name": "Rubber", "value": 30 },
+        { "name": "GenericHard", "value": 31 },
+        { "name": "BodyArmor", "value": 32 },
+        { "name": "Swamp", "value": 33 },
+        { "name": "Helmet", "value": 34 },
+        { "name": "GlassVisor", "value": 35 },
+        { "name": "HelmetRicochet", "value": 36 },
+        { "name": "MetalNoDecal", "value": 37 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "UNITY_COLLIDER_TYPE",
+      "anchor": "enum_global_UNITY_COLLIDER_TYPE",
+      "values": [
+        { "name": "BOX", "value": 0 },
+        { "name": "SPHERE", "value": 1 },
+        { "name": "CAPSULE", "value": 2 }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "flag_type",
+      "anchor": "enum_global_flag_type",
+      "values": [
+        { "name": "DISTANCE", "value": 0 },
+        { "name": "PRICE", "value": 1 },
+        { "name": "TEAMMATE", "value": 2 },
+        { "name": "HITTABLE", "value": 3 },
+        { "name": "AMMO_COUNT", "value": 4 },
+        { "name": "AMMO_TYPE", "value": 5 }
+      ]
+    }
+  ],
+  "globalFunctions": [
+    {
+      "namespace": "",
+      "name": "abs",
+      "declaration": "int abs(int)"
+    },
+    {
+      "namespace": "",
+      "name": "abs",
+      "declaration": "float abs(float)"
+    },
+    {
+      "namespace": "",
+      "name": "acos",
+      "declaration": "float acos(float)"
+    },
+    {
+      "namespace": "",
+      "name": "asin",
+      "declaration": "float asin(float)"
+    },
+    {
+      "namespace": "",
+      "name": "atan",
+      "declaration": "float atan(float)"
+    },
+    {
+      "namespace": "",
+      "name": "atan2",
+      "declaration": "float atan2(float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "ceil",
+      "declaration": "float ceil(float)"
+    },
+    {
+      "namespace": "",
+      "name": "clamp",
+      "declaration": "float clamp(float, float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "clamp",
+      "declaration": "int clamp(int, int, int)"
+    },
+    {
+      "namespace": "",
+      "name": "closeTo",
+      "declaration": "bool closeTo(float, float, float = 0.00001f)"
+    },
+    {
+      "namespace": "",
+      "name": "closeTo",
+      "declaration": "bool closeTo(double, double, double = 0.0000000001)"
+    },
+    {
+      "namespace": "",
+      "name": "cos",
+      "declaration": "float cos(float)"
+    },
+    {
+      "namespace": "",
+      "name": "cosh",
+      "declaration": "float cosh(float)"
+    },
+    {
+      "namespace": "",
+      "name": "floor",
+      "declaration": "float floor(float)"
+    },
+    {
+      "namespace": "",
+      "name": "format",
+      "declaration": "string format(const string&in fmt, const ?&in...)"
+    },
+    {
+      "namespace": "",
+      "name": "formatFloat",
+      "declaration": "string formatFloat(double val, const string&in options = \"\", uint width = 0, uint precision = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "formatInt",
+      "declaration": "string formatInt(int64 val, const string&in options = \"\", uint width = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "formatUInt",
+      "declaration": "string formatUInt(uint64 val, const string&in options = \"\", uint width = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "fpFromIEEE",
+      "declaration": "float fpFromIEEE(uint)"
+    },
+    {
+      "namespace": "",
+      "name": "fpFromIEEE",
+      "declaration": "double fpFromIEEE(uint64)"
+    },
+    {
+      "namespace": "",
+      "name": "fpToIEEE",
+      "declaration": "uint64 fpToIEEE(double)"
+    },
+    {
+      "namespace": "",
+      "name": "fpToIEEE",
+      "declaration": "uint fpToIEEE(float)"
+    },
+    {
+      "namespace": "",
+      "name": "fraction",
+      "declaration": "float fraction(float)"
+    },
+    {
+      "namespace": "",
+      "name": "log",
+      "declaration": "float log(float)"
+    },
+    {
+      "namespace": "",
+      "name": "log10",
+      "declaration": "float log10(float)"
+    },
+    {
+      "namespace": "",
+      "name": "max",
+      "declaration": "float max(float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "min",
+      "declaration": "float min(float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "parseFloat",
+      "declaration": "double parseFloat(const string&in, uint&out byteCount = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "parseInt",
+      "declaration": "int64 parseInt(const string&in, uint base = 10, uint&out byteCount = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "parseUInt",
+      "declaration": "uint64 parseUInt(const string&in, uint base = 10, uint&out byteCount = 0)"
+    },
+    {
+      "namespace": "",
+      "name": "pow",
+      "declaration": "float pow(float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "scan",
+      "declaration": "uint scan(const string&in str, ?&out...)"
+    },
+    {
+      "namespace": "",
+      "name": "sin",
+      "declaration": "float sin(float)"
+    },
+    {
+      "namespace": "",
+      "name": "sinh",
+      "declaration": "float sinh(float)"
+    },
+    {
+      "namespace": "",
+      "name": "sqrt",
+      "declaration": "float sqrt(float)"
+    },
+    {
+      "namespace": "",
+      "name": "tan",
+      "declaration": "float tan(float)"
+    },
+    {
+      "namespace": "",
+      "name": "tanh",
+      "declaration": "float tanh(float)"
+    },
+    {
+      "namespace": "cheat",
+      "name": "add_log",
+      "declaration": "void cheat::add_log(string text, int font = 0)"
+    },
+    {
+      "namespace": "cheat",
+      "name": "get_binds",
+      "declaration": "array<bind_t>@ cheat::get_binds()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_cache_data",
+      "declaration": "sdk_data_t@ game::get_cache_data()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_camera",
+      "declaration": "unity_camera_t@ game::get_camera()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_claymores",
+      "declaration": "array<cached_claymore_t@>@ game::get_claymores()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_corpses",
+      "declaration": "array<cached_corpse_t@>@ game::get_corpses()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_extracts",
+      "declaration": "array<cached_exit_t@>@ game::get_extracts()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_game_world",
+      "declaration": "game_world_t@ game::get_game_world()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_globals",
+      "declaration": "globals_t@ game::get_globals()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_items",
+      "declaration": "array<item_t@>@ game::get_items()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_local_player",
+      "declaration": "player_t@ game::get_local_player()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_mines",
+      "declaration": "array<cached_mine_t@>@ game::get_mines()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_module_base",
+      "declaration": "uint64 game::get_module_base(string name)"
+    },
+    {
+      "namespace": "game",
+      "name": "get_players",
+      "declaration": "array<player_t@>@ game::get_players()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_render_data",
+      "declaration": "sdk_data_t@ game::get_render_data()"
+    },
+    {
+      "namespace": "game",
+      "name": "get_tripwires",
+      "declaration": "array<cached_tripwire_t@>@ game::get_tripwires()"
+    },
+    {
+      "namespace": "game",
+      "name": "move_mouse",
+      "declaration": "void game::move_mouse(const vec2_t&in pos)"
+    },
+    {
+      "namespace": "game",
+      "name": "read",
+      "declaration": "T game::read<T>(uint64 address)"
+    },
+    {
+      "namespace": "game",
+      "name": "to_screen",
+      "declaration": "bool game::to_screen(const vec3_t&in, vec2_t&out screen)"
+    },
+    {
+      "namespace": "game",
+      "name": "write",
+      "declaration": "void game::write<T>(uint64 address, const T&in value)"
+    },
+    {
+      "namespace": "math",
+      "name": "rand_float",
+      "declaration": "float math::rand_float(float min_val, float max_val)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_button",
+      "declaration": "button_t@ menu::add_button(string label)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_checkbox",
+      "declaration": "checkbox_t@ menu::add_checkbox(string label, bool value = false)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_colorpicker",
+      "declaration": "colorpicker_t@ menu::add_colorpicker(string label)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_combo",
+      "declaration": "combo_t@ menu::add_combo(string label, array<string>@ combo_elements, int value = 0)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_keybind",
+      "declaration": "keybind_t@ menu::add_keybind(string label, int default_key = 1, INTERACTION_TYPE default_mode = INTERACTION_TYPE::HELD)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_multi_combo",
+      "declaration": "multi_combo_t@ menu::add_multi_combo(string label, array<string>@ combo_elements)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_slider_float",
+      "declaration": "slider_float_t@ menu::add_slider_float(string label, float min, float max, float value = 0.f, string format_text = \"%.1f\")"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_slider_int",
+      "declaration": "slider_int_t@ menu::add_slider_int(string label, int min, int max, int value = 0.f, string format_text = \"%d\")"
+    },
+    {
+      "namespace": "menu",
+      "name": "find_element",
+      "declaration": "T@ menu::find_element<T>(const string&in child_name, const string&in element_name)"
+    },
+    {
+      "namespace": "menu",
+      "name": "get_element_child",
+      "declaration": "child_t@ menu::get_element_child()"
+    },
+    {
+      "namespace": "menu",
+      "name": "get_main_child",
+      "declaration": "child_t@ menu::get_main_child()"
+    },
+    {
+      "namespace": "menu",
+      "name": "get_window",
+      "declaration": "window_t@ menu::get_window()"
+    },
+    {
+      "namespace": "menu",
+      "name": "remove_element",
+      "declaration": "void menu::remove_element(string label)"
+    },
+    {
+      "namespace": "menu",
+      "name": "set_current_child",
+      "declaration": "void menu::set_current_child(child_t@)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_circle",
+      "declaration": "void render::add_circle(vec2_t pos, color_t color, float radius = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_circle_filled",
+      "declaration": "void render::add_circle_filled(vec2_t pos, color_t color, float radius = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_line",
+      "declaration": "void render::add_line(vec2_t from, vec2_t to, color_t color, float thickness = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_rect",
+      "declaration": "void render::add_rect(vec2_t pos, vec2_t size, color_t color, float rounding = 0.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_rect_filled",
+      "declaration": "void render::add_rect_filled(vec2_t pos, vec2_t size, color_t color, float rounding = 0.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_rect_outlined",
+      "declaration": "void render::add_rect_outlined(vec2_t pos, vec2_t size, color_t color, float rounding = 0.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_text",
+      "declaration": "void render::add_text(vec2_t pos, string text, color_t color, int font = 0)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_text_shadowed",
+      "declaration": "void render::add_text_shadowed(vec2_t pos, string text, color_t color, int font = 0)"
+    },
+    {
+      "namespace": "render",
+      "name": "area_contains",
+      "declaration": "bool render::area_contains(vec2_t pos, vec2_t size, vec2_t test_pos)"
+    },
+    {
+      "namespace": "render",
+      "name": "create_font",
+      "declaration": "font_t@ render::create_font(string file_name, float size = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "get_click_pos",
+      "declaration": "vec2_t render::get_click_pos()"
+    },
+    {
+      "namespace": "render",
+      "name": "get_cursor_pos",
+      "declaration": "vec2_t render::get_cursor_pos()"
+    },
+    {
+      "namespace": "render",
+      "name": "get_delta_time",
+      "declaration": "float render::get_delta_time()"
+    },
+    {
+      "namespace": "render",
+      "name": "get_display_size",
+      "declaration": "vec2_t render::get_display_size()"
+    },
+    {
+      "namespace": "render",
+      "name": "get_key_state",
+      "declaration": "bool render::get_key_state(int key)"
+    },
+    {
+      "namespace": "render",
+      "name": "get_text_size",
+      "declaration": "vec2_t render::get_text_size(const string&in text, int font = 0)"
+    },
+    {
+      "namespace": "render",
+      "name": "get_time",
+      "declaration": "double render::get_time()"
+    },
+    {
+      "namespace": "render",
+      "name": "to_screen",
+      "declaration": "vec2_t render::to_screen(vec3_t pos)"
+    }
+  ]
+}

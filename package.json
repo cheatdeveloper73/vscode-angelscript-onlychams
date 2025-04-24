@@ -1,0 +1,54 @@
+{
+  "name": "OnlyChams",
+  "displayName": "AngelScript - OnlyChams",
+  "description": "OnlyChams scripting support",
+  "publisher": "RedRebelFuture",
+  "icon": "images/icon.png",
+  "keywords": ["angelscript", "syntax", "autocomplete", "language"],
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:angelscript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "angelscript",
+        "aliases": [
+          "AngelScript",
+          "angelscript"
+        ],
+        "extensions": [
+          ".as",
+          ".ash"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "angelscript",
+        "scopeName": "source.angelscript",
+        "path": "./syntaxes/angelscript.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "generate-grammar": "node ./generate_grammar.js",
+    "build": "npm run generate-grammar && npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/vscode": "^1.99.1",
+    "typescript": "^5.8.3"
+  }
+}
