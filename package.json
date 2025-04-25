@@ -5,9 +5,10 @@
   "publisher": "RedRebelFuture",
   "icon": "images/icon.png",
   "keywords": ["angelscript", "syntax", "autocomplete", "language"],
+  "repository": "https://github.com/cheatdeveloper73/vscode-angelscript-onlychams",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.99.0"
+    "vscode": "^1.1.0"
   },
   "categories": [
     "Programming Languages"
