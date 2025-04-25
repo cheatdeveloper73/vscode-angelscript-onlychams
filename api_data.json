@@ -1,5 +1,5 @@
 {
-  "generatedTimestamp": "2025-04-24 20:22:48 UTC",
+  "generatedTimestamp": "2025-04-25 21:02:43 UTC",
   "objectTypes": [
     {
       "namespace": "",
@@ -493,7 +493,17 @@
         { "declaration": "vec2_t get_pos() const" },
         { "declaration": "void clear_elements()" },
         { "declaration": "bool pop_element(const string&in)" },
-        { "declaration": "array<element_t@>@ get_elements()" }
+        { "declaration": "checkbox_t@ add_checkbox(const string&in label, bool value = false)" },
+        { "declaration": "slider_float_t@ add_slider_float(const string&in label, float min, float max, float value = 0.f, const string&in format_text = \"%.1f\")" },
+        { "declaration": "slider_int_t@ add_slider_int(const string&in label, int min, int max, int value = 0, const string&in format_text = \"%d\")" },
+        { "declaration": "combo_t@ add_combo(const string&in label, array<string>@ combo_elements, int value = 0)" },
+        { "declaration": "multi_combo_t@ add_multi_combo(const string&in label, array<string>@ combo_elements)" },
+        { "declaration": "button_t@ add_button(const string&in label)" },
+        { "declaration": "colorpicker_t@ add_colorpicker(const string&in label)" },
+        { "declaration": "keybind_t@ add_keybind(const string&in label, int default_key = 1, INTERACTION_TYPE default_mode = INTERACTION_TYPE::HELD)" },
+        { "declaration": "input_text_t@ add_input_text(const string&in label, const string&in hint = \"\")" },
+        { "declaration": "array<element_t@>@ get_elements()" },
+        { "declaration": "T@ find_element<T>(const string&in)" }
       ],
       "behaviours": [
       ]
@@ -962,6 +972,28 @@
       ],
       "methods": [
         { "declaration": "game_object_t@ game_object()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "input_text_t",
+      "anchor": "type_global_input_text_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string get_value()" },
+        { "declaration": "void set_value(const string&in value)" },
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
       ],
       "behaviours": [
       ]
@@ -1757,15 +1789,16 @@
         { "declaration": "vec2_t get_default_size() const" },
         { "declaration": "vec2_t get_pos() const" },
         { "declaration": "string get_name() const" },
-        { "declaration": "child_t@ insert_child(const string&in, const vec2_t&in pos = vec2_t(-1,-1), const vec2_t&in size = vec2_t(-1,-1), int flags = 0)" },
-        { "declaration": "child_t@ find_child(const string&in)" },
+        { "declaration": "child_t@ insert_child(const string&in name, const vec2_t&in pos = vec2_t(-1,-1), const vec2_t&in size = vec2_t(-1,-1), int flags = 0)" },
+        { "declaration": "child_t@ find_child(const string&in name)" },
         { "declaration": "bool pop_element(const string&in)" },
         { "declaration": "uint get_element_count() const" },
         { "declaration": "void set_force_pos(bool, const vec2_t&in)" },
         { "declaration": "array<element_t@>@ get_elements()" },
         { "declaration": "array<child_t@>@ get_children()" },
         { "declaration": "array<keybind_t@>@ get_all_binds() const" },
-        { "declaration": "array<element_t@>@ get_all_cfg_elements()" }
+        { "declaration": "array<element_t@>@ get_all_cfg_elements()" },
+        { "declaration": "T@ find_element<T>(const string&in)" }
       ],
       "behaviours": [
       ]
@@ -2343,6 +2376,11 @@
       "namespace": "menu",
       "name": "add_combo",
       "declaration": "combo_t@ menu::add_combo(string label, array<string>@ combo_elements, int value = 0)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_input_text",
+      "declaration": "input_text_t@ menu::add_input_text(string label, string hint = \"\")"
     },
     {
       "namespace": "menu",
