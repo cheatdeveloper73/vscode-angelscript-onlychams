@@ -1,5 +1,5 @@
 {
-  "generatedTimestamp": "2025-04-25 21:02:43 UTC",
+  "generatedTimestamp": "2025-04-26 01:18:17 UTC",
   "objectTypes": [
     {
       "namespace": "",
@@ -502,6 +502,7 @@
         { "declaration": "colorpicker_t@ add_colorpicker(const string&in label)" },
         { "declaration": "keybind_t@ add_keybind(const string&in label, int default_key = 1, INTERACTION_TYPE default_mode = INTERACTION_TYPE::HELD)" },
         { "declaration": "input_text_t@ add_input_text(const string&in label, const string&in hint = \"\")" },
+        { "declaration": "void set_visibility_callback(visibility_callback_fn@ func)" },
         { "declaration": "array<element_t@>@ get_elements()" },
         { "declaration": "T@ find_element<T>(const string&in)" }
       ],
@@ -1789,7 +1790,7 @@
         { "declaration": "vec2_t get_default_size() const" },
         { "declaration": "vec2_t get_pos() const" },
         { "declaration": "string get_name() const" },
-        { "declaration": "child_t@ insert_child(const string&in name, const vec2_t&in pos = vec2_t(-1,-1), const vec2_t&in size = vec2_t(-1,-1), int flags = 0)" },
+        { "declaration": "child_t@ insert_child(const string&in name, const vec2_t&in pos = vec2_t(-1,-1), const vec2_t&in size = vec2_t(-1,-1), int flags = 1)" },
         { "declaration": "child_t@ find_child(const string&in name)" },
         { "declaration": "bool pop_element(const string&in)" },
         { "declaration": "uint get_element_count() const" },
@@ -2416,6 +2417,11 @@
       "namespace": "menu",
       "name": "get_main_child",
       "declaration": "child_t@ menu::get_main_child()"
+    },
+    {
+      "namespace": "menu",
+      "name": "get_tab",
+      "declaration": "int menu::get_tab()"
     },
     {
       "namespace": "menu",
