@@ -1,5 +1,5 @@
 {
-  "generatedTimestamp": "2025-04-26 06:30:05 UTC",
+  "generatedTimestamp": "2025-05-02 03:35:38 UTC",
   "objectTypes": [
     {
       "namespace": "",
@@ -896,6 +896,17 @@
     },
     {
       "namespace": "",
+      "name": "glist_t",
+      "anchor": "type_global_glist_t",
+      "properties": [
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
       "name": "globals_t",
       "anchor": "type_global_globals_t",
       "properties": [
@@ -1106,6 +1117,18 @@
     },
     {
       "namespace": "",
+      "name": "mono_assembly_t",
+      "anchor": "type_global_mono_assembly_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "mono_image_t@ mono_image() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
       "name": "mono_behaviour_t",
       "anchor": "type_global_mono_behaviour_t",
       "properties": [
@@ -1114,6 +1137,115 @@
         { "declaration": "game_object_t@ game_object()" },
         { "declaration": "string class_name()" },
         { "declaration": "int instance_id()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_class_field_t",
+      "anchor": "type_global_mono_class_field_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string name() const" },
+        { "declaration": "int offset() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_class_runtime_info_t",
+      "anchor": "type_global_mono_class_runtime_info_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int max_domain() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_class_t",
+      "anchor": "type_global_mono_class_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string name() const" },
+        { "declaration": "string namespace_name() const" },
+        { "declaration": "int num_fields() const" },
+        { "declaration": "int get_num_methods() const" },
+        { "declaration": "mono_method_t@ get_method(int) const" },
+        { "declaration": "mono_class_field_t@ get_field(int) const" },
+        { "declaration": "mono_vtable_t@ get_vtable(mono_root_domain_t@) const" },
+        { "declaration": "mono_class_runtime_info_t@ runtime_info() const" },
+        { "declaration": "mono_method_t@ find_method(const string&in) const" },
+        { "declaration": "mono_class_field_t@ find_field(const string&in) const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_image_t",
+      "anchor": "type_global_mono_image_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int flags() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_method_signature_t",
+      "anchor": "type_global_mono_method_signature_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "int16 param_count() const" },
+        { "declaration": "mono_class_t@ get_param_type(int) const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_method_t",
+      "anchor": "type_global_mono_method_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string name() const" },
+        { "declaration": "mono_method_signature_t@ signature() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_root_domain_t",
+      "anchor": "type_global_mono_root_domain_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "glist_t@ domain_assemblies() const" },
+        { "declaration": "int domain_id() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mono_vtable_t",
+      "anchor": "type_global_mono_vtable_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "uint64 get_static_field_data() const" }
       ],
       "behaviours": [
       ]
@@ -1219,6 +1351,26 @@
         { "declaration": "void set_fall_damage_multiplier(float)" }
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "physx_hit_t",
+      "anchor": "type_global_physx_hit_t",
+      "properties": [
+        { "declaration": "vec3_t point" },
+        { "declaration": "vec3_t normal" },
+        { "declaration": "float distance" },
+        { "declaration": "bool did_hit" },
+        { "declaration": "int actor_idx" },
+        { "declaration": "int geomtry_id" }
+      ],
+      "methods": [
+        { "declaration": "bool is_visible(float max_dst) const" }
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~physx_hit_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "physx_hit_t()" }
       ]
     },
     {
@@ -1405,6 +1557,22 @@
         { "declaration": "void set_rotation(vec3_t, bool reset = false)" }
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "request_t",
+      "anchor": "type_global_request_t",
+      "properties": [
+        { "declaration": "vec3_t origin" },
+        { "declaration": "vec3_t dir" },
+        { "declaration": "float max_dst" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "destructor", "name": "$beh2", "declaration": "~request_t()" },
+        { "type": "constructor", "name": "$beh0", "declaration": "request_t()" }
       ]
     },
     {
@@ -2107,12 +2275,12 @@
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "float clamp(float, float, float)"
+      "declaration": "int clamp(int, int, int)"
     },
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "int clamp(int, int, int)"
+      "declaration": "float clamp(float, float, float)"
     },
     {
       "namespace": "",
@@ -2133,6 +2301,16 @@
       "namespace": "",
       "name": "cosh",
       "declaration": "float cosh(float)"
+    },
+    {
+      "namespace": "",
+      "name": "find_class",
+      "declaration": "mono_class_t@ find_class(const string&in assemblyName, const string&in className)"
+    },
+    {
+      "namespace": "",
+      "name": "find_singleton_class_instance",
+      "declaration": "uint64 find_singleton_class_instance(const string&in targetName)"
     },
     {
       "namespace": "",
@@ -2162,12 +2340,12 @@
     {
       "namespace": "",
       "name": "fpFromIEEE",
-      "declaration": "float fpFromIEEE(uint)"
+      "declaration": "double fpFromIEEE(uint64)"
     },
     {
       "namespace": "",
       "name": "fpFromIEEE",
-      "declaration": "double fpFromIEEE(uint64)"
+      "declaration": "float fpFromIEEE(uint)"
     },
     {
       "namespace": "",
@@ -2183,6 +2361,11 @@
       "namespace": "",
       "name": "fraction",
       "declaration": "float fraction(float)"
+    },
+    {
+      "namespace": "",
+      "name": "get_all_game_objects",
+      "declaration": "array<cached_game_object_t>@ get_all_game_objects()"
     },
     {
       "namespace": "",
@@ -2321,6 +2504,11 @@
     },
     {
       "namespace": "game",
+      "name": "get_object_from_instance_id",
+      "declaration": "uint64 game::get_object_from_instance_id(int instance_id)"
+    },
+    {
+      "namespace": "game",
       "name": "get_players",
       "declaration": "array<player_t@>@ game::get_players()"
     },
@@ -2336,13 +2524,38 @@
     },
     {
       "namespace": "game",
+      "name": "is_penetrable",
+      "declaration": "bool game::is_penetrable(MaterialType material)"
+    },
+    {
+      "namespace": "game",
+      "name": "linecast",
+      "declaration": "physx_hit_t game::linecast(const vec3_t&in from, const vec3_t&in to, bool autowall = false)"
+    },
+    {
+      "namespace": "game",
+      "name": "linecast_batched",
+      "declaration": "array<physx_hit_t>@ game::linecast_batched(array<request_t>@ requests, bool autowall = false)"
+    },
+    {
+      "namespace": "game",
       "name": "move_mouse",
       "declaration": "void game::move_mouse(const vec2_t&in pos)"
     },
     {
       "namespace": "game",
+      "name": "raycast",
+      "declaration": "physx_hit_t game::raycast(const vec3_t&in origin, const vec3_t&in direction, bool autowall = false)"
+    },
+    {
+      "namespace": "game",
       "name": "read",
       "declaration": "T game::read<T>(uint64 address)"
+    },
+    {
+      "namespace": "game",
+      "name": "scripting_wrapper_for",
+      "declaration": "uint64 game::scripting_wrapper_for(uint64 object)"
     },
     {
       "namespace": "game",
