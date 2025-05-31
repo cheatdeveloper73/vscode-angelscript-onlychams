@@ -1,5 +1,5 @@
 {
-  "generatedTimestamp": "2025-05-02 03:35:38 UTC",
+  "generatedTimestamp": "2025-05-30 17:08:13 UTC",
   "objectTypes": [
     {
       "namespace": "",
@@ -133,6 +133,20 @@
       ],
       "behaviours": [
         { "type": "constructor", "name": "$beh0", "declaration": "bind_t(string, int = 1, INTERACTION_TYPE = INTERACTION_TYPE::HELD)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "bitmap_t",
+      "anchor": "type_global_bitmap_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bitmap_t& opAssign(const bitmap_t&in)" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -896,6 +910,20 @@
     },
     {
       "namespace": "",
+      "name": "gif_t",
+      "anchor": "type_global_gif_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "bool load(const string&in file_path)" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
       "name": "glist_t",
       "anchor": "type_global_glist_t",
       "properties": [
@@ -1068,6 +1096,47 @@
       "methods": [
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "json",
+      "anchor": "type_global_json",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "json& opAssign(bool)" },
+        { "declaration": "json& opAssign(int64)" },
+        { "declaration": "json& opAssign(double)" },
+        { "declaration": "json& opAssign(const string&in)" },
+        { "declaration": "json& opAssign(const json&in)" },
+        { "declaration": "json& opAssign(const array<json@>&in)" },
+        { "declaration": "void set(const string&in, bool)" },
+        { "declaration": "bool get(const string&in, bool&out) const" },
+        { "declaration": "void set(const string&in, int64)" },
+        { "declaration": "bool get(const string&in, int64&out) const" },
+        { "declaration": "void set(const string&in, double)" },
+        { "declaration": "bool get(const string&in, double&out) const" },
+        { "declaration": "void set(const string&in, const string&in)" },
+        { "declaration": "bool get(const string&in, string&out) const" },
+        { "declaration": "void set(const string&in, const array<json@>&in)" },
+        { "declaration": "bool get(const string&in, array<json@>&out) const" },
+        { "declaration": "bool exists(const string&in) const" },
+        { "declaration": "bool isEmpty() const" },
+        { "declaration": "uint getSize() const" },
+        { "declaration": "void clear()" },
+        { "declaration": "jsonType getType()" },
+        { "declaration": "json@ opIndex(const string&in)" },
+        { "declaration": "const json@ opIndex(const string&in) const" },
+        { "declaration": "bool opConv() const" },
+        { "declaration": "string opConv() const" },
+        { "declaration": "int64 opConv() const" },
+        { "declaration": "double opConv() const" },
+        { "declaration": "array<json@>@ opConv() const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -1366,6 +1435,7 @@
         { "declaration": "int geomtry_id" }
       ],
       "methods": [
+        { "declaration": "physx_hit_t& opAssign(const physx_hit_t&in)" },
         { "declaration": "bool is_visible(float max_dst) const" }
       ],
       "behaviours": [
@@ -1451,6 +1521,9 @@
       ],
       "methods": [
         { "declaration": "player_t& opAssign(const player_t&in)" },
+        { "declaration": "uint64 get_address() const" },
+        { "declaration": "vec3_t get_velocity() const" },
+        { "declaration": "vec2_t get_rotation() const" },
         { "declaration": "string get_name() const" },
         { "declaration": "array<unity_transform_t@>@ get_bones() const" },
         { "declaration": "array<player_flag_t>@ get_flags() const" },
@@ -1825,9 +1898,12 @@
         { "declaration": "float length_2d()" },
         { "declaration": "float magnitude()" },
         { "declaration": "vec3_t cross(const vec3_t&in to)" },
+        { "declaration": "vec3_t normalized() const" },
         { "declaration": "bool opEquals(const vec3_t&in) const" },
         { "declaration": "bool opNotEquals(const vec3_t&in) const" },
         { "declaration": "vec3_t opAdd(const vec3_t&in) const" },
+        { "declaration": "vec3_t opSub(const vec3_t&in) const" },
+        { "declaration": "vec3_t opMul(float) const" },
         { "declaration": "vec3_t& opDiv(float)" },
         { "declaration": "vec3_t& opAddAssign(const vec3_t&in)" },
         { "declaration": "vec3_t& opSubAssign(const vec3_t&in)" },
@@ -2234,6 +2310,20 @@
         { "name": "AMMO_COUNT", "value": 4 },
         { "name": "AMMO_TYPE", "value": 5 }
       ]
+    },
+    {
+      "namespace": "",
+      "name": "jsonType",
+      "anchor": "enum_global_jsonType",
+      "values": [
+        { "name": "OBJECT_VALUE", "value": 0 },
+        { "name": "ARRAY_VALUE", "value": 1 },
+        { "name": "BOOLEAN_VALUE", "value": 2 },
+        { "name": "STRING_VALUE", "value": 3 },
+        { "name": "NUMBER_VALUE", "value": 4 },
+        { "name": "REAL_VALUE", "value": 5 },
+        { "name": "NULL_VALUE", "value": 6 }
+      ]
     }
   ],
   "globalFunctions": [
@@ -2275,12 +2365,12 @@
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "int clamp(int, int, int)"
+      "declaration": "float clamp(float, float, float)"
     },
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "float clamp(float, float, float)"
+      "declaration": "int clamp(int, int, int)"
     },
     {
       "namespace": "",
@@ -2301,16 +2391,6 @@
       "namespace": "",
       "name": "cosh",
       "declaration": "float cosh(float)"
-    },
-    {
-      "namespace": "",
-      "name": "find_class",
-      "declaration": "mono_class_t@ find_class(const string&in assemblyName, const string&in className)"
-    },
-    {
-      "namespace": "",
-      "name": "find_singleton_class_instance",
-      "declaration": "uint64 find_singleton_class_instance(const string&in targetName)"
     },
     {
       "namespace": "",
@@ -2340,17 +2420,12 @@
     {
       "namespace": "",
       "name": "fpFromIEEE",
-      "declaration": "double fpFromIEEE(uint64)"
-    },
-    {
-      "namespace": "",
-      "name": "fpFromIEEE",
       "declaration": "float fpFromIEEE(uint)"
     },
     {
       "namespace": "",
-      "name": "fpToIEEE",
-      "declaration": "uint64 fpToIEEE(double)"
+      "name": "fpFromIEEE",
+      "declaration": "double fpFromIEEE(uint64)"
     },
     {
       "namespace": "",
@@ -2359,13 +2434,43 @@
     },
     {
       "namespace": "",
+      "name": "fpToIEEE",
+      "declaration": "uint64 fpToIEEE(double)"
+    },
+    {
+      "namespace": "",
       "name": "fraction",
       "declaration": "float fraction(float)"
     },
     {
       "namespace": "",
-      "name": "get_all_game_objects",
-      "declaration": "array<cached_game_object_t>@ get_all_game_objects()"
+      "name": "get_documents_path",
+      "declaration": "string get_documents_path()"
+    },
+    {
+      "namespace": "",
+      "name": "http_request",
+      "declaration": "string http_request(string method, string full_url, string headers, string request_body = \"\")"
+    },
+    {
+      "namespace": "",
+      "name": "jsonParse",
+      "declaration": "json@ jsonParse(const string&in)"
+    },
+    {
+      "namespace": "",
+      "name": "jsonParseFile",
+      "declaration": "json@ jsonParseFile(const string&in)"
+    },
+    {
+      "namespace": "",
+      "name": "jsonWrite",
+      "declaration": "bool jsonWrite(const json&in, string&out)"
+    },
+    {
+      "namespace": "",
+      "name": "jsonWriteFile",
+      "declaration": "bool jsonWriteFile(const json&in, const string&in)"
     },
     {
       "namespace": "",
@@ -2404,6 +2509,11 @@
     },
     {
       "namespace": "",
+      "name": "play_sound",
+      "declaration": "void play_sound(string file_path)"
+    },
+    {
+      "namespace": "",
       "name": "pow",
       "declaration": "float pow(float, float)"
     },
@@ -2438,6 +2548,11 @@
       "declaration": "float tanh(float)"
     },
     {
+      "namespace": "",
+      "name": "url_download_to_file",
+      "declaration": "bool url_download_to_file(string full_url, string file_path)"
+    },
+    {
       "namespace": "cheat",
       "name": "add_log",
       "declaration": "void cheat::add_log(string text, int font = 0)"
@@ -2446,6 +2561,21 @@
       "namespace": "cheat",
       "name": "get_binds",
       "declaration": "array<bind_t>@ cheat::get_binds()"
+    },
+    {
+      "namespace": "game",
+      "name": "find_class",
+      "declaration": "mono_class_t@ game::find_class(string assembly_name, string class_name)"
+    },
+    {
+      "namespace": "game",
+      "name": "find_singleton_class_instance",
+      "declaration": "uint64 game::find_singleton_class_instance(string class_name)"
+    },
+    {
+      "namespace": "game",
+      "name": "get_all_game_objects",
+      "declaration": "array<cached_game_object_t>@ game::get_all_game_objects()"
     },
     {
       "namespace": "game",
@@ -2530,7 +2660,7 @@
     {
       "namespace": "game",
       "name": "linecast",
-      "declaration": "physx_hit_t game::linecast(const vec3_t&in from, const vec3_t&in to, bool autowall = false)"
+      "declaration": "physx_hit_t game::linecast(vec3_t from, vec3_t to, bool autowall = false)"
     },
     {
       "namespace": "game",
@@ -2545,7 +2675,7 @@
     {
       "namespace": "game",
       "name": "raycast",
-      "declaration": "physx_hit_t game::raycast(const vec3_t&in origin, const vec3_t&in direction, bool autowall = false)"
+      "declaration": "physx_hit_t game::raycast(vec3_t origin, vec3_t direction, bool autowall = false)"
     },
     {
       "namespace": "game",
@@ -2664,6 +2794,16 @@
     },
     {
       "namespace": "render",
+      "name": "add_gif",
+      "declaration": "void render::add_gif(gif_t@ gif, vec2_t pos, vec2_t size, float alpha = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_image",
+      "declaration": "void render::add_image(bitmap_t@ bitmap, vec2_t pos, vec2_t size, float alpha = 1.f)"
+    },
+    {
+      "namespace": "render",
       "name": "add_line",
       "declaration": "void render::add_line(vec2_t from, vec2_t to, color_t color, float thickness = 1.f)"
     },
@@ -2685,7 +2825,17 @@
     {
       "namespace": "render",
       "name": "add_text",
+      "declaration": "void render::add_text(vec2_t pos, string text, color_t color, font_t@ font)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_text",
       "declaration": "void render::add_text(vec2_t pos, string text, color_t color, int font = 0)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_text_shadowed",
+      "declaration": "void render::add_text_shadowed(vec2_t pos, string text, color_t color, font_t@ font)"
     },
     {
       "namespace": "render",
@@ -2699,8 +2849,23 @@
     },
     {
       "namespace": "render",
+      "name": "create_bitmap",
+      "declaration": "bitmap_t@ render::create_bitmap(string file_path)"
+    },
+    {
+      "namespace": "render",
       "name": "create_font",
       "declaration": "font_t@ render::create_font(string file_name, float size = 1.f)"
+    },
+    {
+      "namespace": "render",
+      "name": "create_gif",
+      "declaration": "gif_t@ render::create_gif(const string&in file_path)"
+    },
+    {
+      "namespace": "render",
+      "name": "file_explorer_popup",
+      "declaration": "string render::file_explorer_popup(string button_label = \"Open Image\", string filter_string = \"Image Files | *.png\", string default_extension = \"png\", string window_title = \"\")"
     },
     {
       "namespace": "render",
