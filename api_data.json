@@ -1,5 +1,5 @@
 {
-  "generatedTimestamp": "2025-05-30 17:08:13 UTC",
+  "generatedTimestamp": "2025-06-05 22:52:09 UTC",
   "objectTypes": [
     {
       "namespace": "",
@@ -280,21 +280,6 @@
     },
     {
       "namespace": "",
-      "name": "cached_claymore_t",
-      "anchor": "type_global_cached_claymore_t",
-      "properties": [
-        { "declaration": "vec3_t pos" },
-        { "declaration": "vec3_t rotation" }
-      ],
-      "methods": [
-      ],
-      "behaviours": [
-        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
-        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
-      ]
-    },
-    {
-      "namespace": "",
       "name": "cached_container_t",
       "anchor": "type_global_cached_container_t",
       "properties": [
@@ -306,42 +291,6 @@
         { "declaration": "vec3_t collider_center" },
         { "declaration": "quaternion_t rotation" },
         { "declaration": "uint64 address" }
-      ],
-      "methods": [
-      ],
-      "behaviours": [
-        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
-        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
-      ]
-    },
-    {
-      "namespace": "",
-      "name": "cached_corpse_t",
-      "anchor": "type_global_cached_corpse_t",
-      "properties": [
-        { "declaration": "carried_data_t carried" },
-        { "declaration": "vec3_t position" },
-        { "declaration": "vec3_t collider_size" },
-        { "declaration": "vec3_t collider_center" },
-        { "declaration": "quaternion_t rotation" },
-        { "declaration": "uint64 address" },
-        { "declaration": "int total_price" }
-      ],
-      "methods": [
-      ],
-      "behaviours": [
-        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
-        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
-      ]
-    },
-    {
-      "namespace": "",
-      "name": "cached_exit_t",
-      "anchor": "type_global_cached_exit_t",
-      "properties": [
-        { "declaration": "string name" },
-        { "declaration": "string status" },
-        { "declaration": "vec3_t position" }
       ],
       "methods": [
       ],
@@ -392,20 +341,6 @@
     },
     {
       "namespace": "",
-      "name": "cached_mine_t",
-      "anchor": "type_global_cached_mine_t",
-      "properties": [
-        { "declaration": "vec3_t pos" }
-      ],
-      "methods": [
-      ],
-      "behaviours": [
-        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
-        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
-      ]
-    },
-    {
-      "namespace": "",
       "name": "cached_part_collider_t",
       "anchor": "type_global_cached_part_collider_t",
       "properties": [
@@ -420,23 +355,6 @@
         { "type": "destructor", "name": "$beh2", "declaration": "~cached_part_collider_t()" },
         { "type": "constructor", "name": "$beh0", "declaration": "cached_part_collider_t()" },
         { "type": "constructor", "name": "$beh0", "declaration": "cached_part_collider_t(const cached_part_collider_t&in)" }
-      ]
-    },
-    {
-      "namespace": "",
-      "name": "cached_tripwire_t",
-      "anchor": "type_global_cached_tripwire_t",
-      "properties": [
-        { "declaration": "vec3_t from_pos" },
-        { "declaration": "vec3_t to_pos" },
-        { "declaration": "ETripwireState state" },
-        { "declaration": "bool grenade_active" }
-      ],
-      "methods": [
-      ],
-      "behaviours": [
-        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
-        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -488,7 +406,9 @@
         { "declaration": "void set_tooltip(string value)" },
         { "declaration": "void set_position(vec2_t value)" },
         { "declaration": "ELEMENT_TYPE get_type()" },
-        { "declaration": "element_t@ opImplCast()" }
+        { "declaration": "element_t@ opImplCast()" },
+        { "declaration": "string get_text()" },
+        { "declaration": "void set_text(string value)" }
       ],
       "behaviours": [
       ]
@@ -513,6 +433,7 @@
         { "declaration": "combo_t@ add_combo(const string&in label, array<string>@ combo_elements, int value = 0)" },
         { "declaration": "multi_combo_t@ add_multi_combo(const string&in label, array<string>@ combo_elements)" },
         { "declaration": "button_t@ add_button(const string&in label)" },
+        { "declaration": "label_t@ add_label(const string&in label)" },
         { "declaration": "colorpicker_t@ add_colorpicker(const string&in label)" },
         { "declaration": "keybind_t@ add_keybind(const string&in label, int default_key = 1, INTERACTION_TYPE default_mode = INTERACTION_TYPE::HELD)" },
         { "declaration": "input_text_t@ add_input_text(const string&in label, const string&in hint = \"\")" },
@@ -521,6 +442,22 @@
         { "declaration": "T@ find_element<T>(const string&in)" }
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "claymore_t",
+      "anchor": "type_global_claymore_t",
+      "properties": [
+        { "declaration": "vec3_t pos" },
+        { "declaration": "vec3_t rotation" },
+        { "declaration": "mine_directional_t mine" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -638,6 +575,26 @@
         { "type": "template_callback", "name": "$beh8", "declaration": "bool $beh8(int&in, bool&out)" },
         { "type": "constructor", "name": "$beh0", "declaration": "const_weakref(int&in)" },
         { "type": "constructor", "name": "$beh0", "declaration": "const_weakref(int&in, const T@)" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "corpse_t",
+      "anchor": "type_global_corpse_t",
+      "properties": [
+        { "declaration": "carried_data_t carried" },
+        { "declaration": "vec3_t position" },
+        { "declaration": "vec3_t collider_size" },
+        { "declaration": "vec3_t collider_center" },
+        { "declaration": "quaternion_t rotation" },
+        { "declaration": "uint64 address" },
+        { "declaration": "int total_price" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -767,6 +724,22 @@
         { "declaration": "ELEMENT_TYPE get_type()" }
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "exit_t",
+      "anchor": "type_global_exit_t",
+      "properties": [
+        { "declaration": "string name" },
+        { "declaration": "string status" },
+        { "declaration": "vec3_t position" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -1064,6 +1037,31 @@
     },
     {
       "namespace": "",
+      "name": "item_parameters_t",
+      "anchor": "type_global_item_parameters_t",
+      "properties": [
+        { "declaration": "item_t item" },
+        { "declaration": "string top_text" },
+        { "declaration": "vec2_t origin_screen" },
+        { "declaration": "color_t top_text_color" },
+        { "declaration": "color_t dst_text_color" },
+        { "declaration": "color_t box_color" },
+        { "declaration": "int max_render_distance" },
+        { "declaration": "int minimum_price" },
+        { "declaration": "int distance" },
+        { "declaration": "float alpha_factor" },
+        { "declaration": "bool on_screen" }
+      ],
+      "methods": [
+        { "declaration": "void update_alpha_factor()" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
       "name": "item_t",
       "anchor": "type_global_item_t",
       "properties": [
@@ -1162,6 +1160,26 @@
     },
     {
       "namespace": "",
+      "name": "label_t",
+      "anchor": "type_global_label_t",
+      "properties": [
+      ],
+      "methods": [
+        { "declaration": "string get_label()" },
+        { "declaration": "void set_label(string value)" },
+        { "declaration": "void set_interaction_callback(interaction_callback_fn@ fn)" },
+        { "declaration": "void set_visible(bool value)" },
+        { "declaration": "bool get_visible()" },
+        { "declaration": "void set_tooltip(string value)" },
+        { "declaration": "void set_position(vec2_t value)" },
+        { "declaration": "ELEMENT_TYPE get_type()" },
+        { "declaration": "element_t@ opImplCast()" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
       "name": "magazine_t",
       "anchor": "type_global_magazine_t",
       "properties": [
@@ -1182,6 +1200,61 @@
         { "declaration": "int get_size()" }
       ],
       "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mine_directional_t",
+      "anchor": "type_global_mine_directional_t",
+      "properties": [
+        { "declaration": "mine_settings_t settings" }
+      ],
+      "methods": [
+        { "declaration": "bool is_active() const" }
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mine_settings_t",
+      "anchor": "type_global_mine_settings_t",
+      "properties": [
+        { "declaration": "vec3_t blindness" },
+        { "declaration": "vec3_t contusion" },
+        { "declaration": "vec3_t armor_distance_distance_damage" },
+        { "declaration": "float min_explosion_distance" },
+        { "declaration": "float max_explosion_distance" },
+        { "declaration": "int fragment_count" },
+        { "declaration": "float strength" },
+        { "declaration": "managed_string_t@ tag" },
+        { "declaration": "float armor_damage" },
+        { "declaration": "float stamina_burn_rate" },
+        { "declaration": "float penetration_power" },
+        { "declaration": "managed_string_t@ fragment_type" },
+        { "declaration": "managed_string_t@ fx_name" },
+        { "declaration": "int ignore_role" },
+        { "declaration": "float directional_damage_angle" },
+        { "declaration": "float directional_damage_multiplier" },
+        { "declaration": "bool is_dummy" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "mine_t",
+      "anchor": "type_global_mine_t",
+      "properties": [
+        { "declaration": "vec3_t pos" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
       ]
     },
     {
@@ -1811,6 +1884,39 @@
     },
     {
       "namespace": "",
+      "name": "texture_t",
+      "anchor": "type_global_texture_t",
+      "properties": [
+        { "declaration": "uint width" },
+        { "declaration": "uint height" }
+      ],
+      "methods": [
+        { "declaration": "color_t get_pixel_color(float u, float v) const" }
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
+      "name": "tripwire_t",
+      "anchor": "type_global_tripwire_t",
+      "properties": [
+        { "declaration": "vec3_t from_pos" },
+        { "declaration": "vec3_t to_pos" },
+        { "declaration": "ETripwireState state" },
+        { "declaration": "bool grenade_active" }
+      ],
+      "methods": [
+      ],
+      "behaviours": [
+        { "type": "addref", "name": "$beh5", "declaration": "void $beh5()" },
+        { "type": "release", "name": "$beh6", "declaration": "void $beh6()" }
+      ]
+    },
+    {
+      "namespace": "",
       "name": "unity_camera_t",
       "anchor": "type_global_unity_camera_t",
       "properties": [
@@ -2330,12 +2436,12 @@
     {
       "namespace": "",
       "name": "abs",
-      "declaration": "int abs(int)"
+      "declaration": "float abs(float)"
     },
     {
       "namespace": "",
       "name": "abs",
-      "declaration": "float abs(float)"
+      "declaration": "int abs(int)"
     },
     {
       "namespace": "",
@@ -2365,12 +2471,12 @@
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "float clamp(float, float, float)"
+      "declaration": "int clamp(int, int, int)"
     },
     {
       "namespace": "",
       "name": "clamp",
-      "declaration": "int clamp(int, int, int)"
+      "declaration": "float clamp(float, float, float)"
     },
     {
       "namespace": "",
@@ -2399,6 +2505,11 @@
     },
     {
       "namespace": "",
+      "name": "fmod",
+      "declaration": "float fmod(float, float)"
+    },
+    {
+      "namespace": "",
       "name": "format",
       "declaration": "string format(const string&in fmt, const ?&in...)"
     },
@@ -2420,12 +2531,12 @@
     {
       "namespace": "",
       "name": "fpFromIEEE",
-      "declaration": "float fpFromIEEE(uint)"
+      "declaration": "double fpFromIEEE(uint64)"
     },
     {
       "namespace": "",
       "name": "fpFromIEEE",
-      "declaration": "double fpFromIEEE(uint64)"
+      "declaration": "float fpFromIEEE(uint)"
     },
     {
       "namespace": "",
@@ -2474,6 +2585,11 @@
     },
     {
       "namespace": "",
+      "name": "load_png_texture",
+      "declaration": "texture_t@ load_png_texture(const string&in)"
+    },
+    {
+      "namespace": "",
       "name": "log",
       "declaration": "float log(float)"
     },
@@ -2489,8 +2605,18 @@
     },
     {
       "namespace": "",
+      "name": "max",
+      "declaration": "int max(int, int)"
+    },
+    {
+      "namespace": "",
       "name": "min",
       "declaration": "float min(float, float)"
+    },
+    {
+      "namespace": "",
+      "name": "min",
+      "declaration": "int min(int, int)"
     },
     {
       "namespace": "",
@@ -2590,17 +2716,17 @@
     {
       "namespace": "game",
       "name": "get_claymores",
-      "declaration": "array<cached_claymore_t@>@ game::get_claymores()"
+      "declaration": "array<claymore_t>@ game::get_claymores()"
     },
     {
       "namespace": "game",
       "name": "get_corpses",
-      "declaration": "array<cached_corpse_t@>@ game::get_corpses()"
+      "declaration": "array<corpse_t>@ game::get_corpses()"
     },
     {
       "namespace": "game",
       "name": "get_extracts",
-      "declaration": "array<cached_exit_t@>@ game::get_extracts()"
+      "declaration": "array<exit_t>@ game::get_extracts()"
     },
     {
       "namespace": "game",
@@ -2615,7 +2741,7 @@
     {
       "namespace": "game",
       "name": "get_items",
-      "declaration": "array<item_t@>@ game::get_items()"
+      "declaration": "array<item_t>@ game::get_items()"
     },
     {
       "namespace": "game",
@@ -2625,7 +2751,7 @@
     {
       "namespace": "game",
       "name": "get_mines",
-      "declaration": "array<cached_mine_t@>@ game::get_mines()"
+      "declaration": "array<mine_t>@ game::get_mines()"
     },
     {
       "namespace": "game",
@@ -2640,7 +2766,7 @@
     {
       "namespace": "game",
       "name": "get_players",
-      "declaration": "array<player_t@>@ game::get_players()"
+      "declaration": "array<player_t>@ game::get_players()"
     },
     {
       "namespace": "game",
@@ -2650,7 +2776,7 @@
     {
       "namespace": "game",
       "name": "get_tripwires",
-      "declaration": "array<cached_tripwire_t@>@ game::get_tripwires()"
+      "declaration": "array<tripwire_t>@ game::get_tripwires()"
     },
     {
       "namespace": "game",
@@ -2731,6 +2857,11 @@
       "namespace": "menu",
       "name": "add_keybind",
       "declaration": "keybind_t@ menu::add_keybind(string label, int default_key = 1, INTERACTION_TYPE default_mode = INTERACTION_TYPE::HELD)"
+    },
+    {
+      "namespace": "menu",
+      "name": "add_label",
+      "declaration": "label_t@ menu::add_label(string label)"
     },
     {
       "namespace": "menu",
@@ -2841,6 +2972,11 @@
       "namespace": "render",
       "name": "add_text_shadowed",
       "declaration": "void render::add_text_shadowed(vec2_t pos, string text, color_t color, int font = 0)"
+    },
+    {
+      "namespace": "render",
+      "name": "add_triangle",
+      "declaration": "void render::add_triangle(vec2_t p1, vec2_t p2, vec2_t p3, color_t inner_col, color_t outer_col)"
     },
     {
       "namespace": "render",
